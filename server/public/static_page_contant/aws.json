@@ -1,0 +1,27 @@
+{
+  "title": "AWS Development Services by Visvik Business Solution",
+  "subtitle": "Scalable. Secure. Cloud-Native.",
+  "introduction": "At Visvik Business Solution, we help businesses build and scale their infrastructure on Amazon Web Services. From cloud migration to architecture design, our AWS-certified experts ensure you get the most out of the cloud.",
+  "servicesTitle": "Our AWS Services",
+  "services": [
+    { "title": "Cloud Architecture Design", "description": "Designing scalable, secure, and cost-effective AWS cloud infrastructure tailored to your business." },
+    { "title": "AWS Migration Services", "description": "Seamless migration of applications, data, and workloads to AWS with zero downtime." },
+    { "title": "Serverless Application Development", "description": "Build highly scalable apps using AWS Lambda and other serverless tools." },
+    { "title": "AWS DevOps Automation", "description": "CI/CD pipelines, infrastructure as code, and automation using AWS services." },
+    { "title": "Monitoring & Optimization", "description": "Proactive monitoring, performance tuning, and cost optimization across your AWS stack." },
+    { "title": "Security & Compliance", "description": "Implementing identity, access control, and compliance measures to protect your cloud workloads." }
+  ],
+  "whyChooseUsTitle": "Why Choose Visvik Business Solution?",
+  "whyChooseUs": [
+    "Certified AWS developers and architects on board.",
+    "End-to-end AWS cloud expertise under one roof.",
+    "Strong focus on scalability, uptime, and security.",
+    "Cost-effective solutions with transparent architecture.",
+    "Ongoing support and performance monitoring."
+  ],
+  "cta": {
+    "heading": "Leverage the Full Power of AWS",
+    "description": "Build, deploy, and scale smarter with Visvik's AWS cloud development services.",
+    "button": "Talk to Our Cloud Experts"
+  }
+}

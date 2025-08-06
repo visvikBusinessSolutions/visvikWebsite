@@ -1,0 +1,27 @@
+{
+  "title": "UI/UX Design Services by Visvik Business Solution",
+  "subtitle": "Design That Delivers Experience.",
+  "introduction": "At Visvik Business Solution, we create visually stunning and intuitive user interfaces that enhance customer engagement. Our UI/UX design process is focused on clarity, consistency, and conversion.",
+  "servicesTitle": "Our UI/UX Design Services",
+  "services": [
+    { "title": "User Research & Analysis", "description": "Understand your users through persona development, journey mapping, and usability testing." },
+    { "title": "Wireframing & Prototyping", "description": "Quick iterations of low- and high-fidelity prototypes to validate concepts early." },
+    { "title": "UI Design", "description": "Pixel-perfect user interface design aligned with your brand identity." },
+    { "title": "UX Design", "description": "Create seamless experiences that are easy to navigate and enjoyable to use." },
+    { "title": "Responsive Design", "description": "Ensure consistent user experiences across all devices and screen sizes." },
+    { "title": "Design Systems & Handoff", "description": "Scalable design systems and smooth developer handoff using tools like Figma or Adobe XD." }
+  ],
+  "whyChooseUsTitle": "Why Choose Visvik Business Solution?",
+  "whyChooseUs": [
+    "Human-centered design approach.",
+    "Designs backed by real user insights.",
+    "Expertise in modern design tools and trends.",
+    "Responsive and cross-platform compatibility.",
+    "Focus on usability, accessibility, and performance."
+  ],
+  "cta": {
+    "heading": "Turn Ideas Into Exceptional Interfaces",
+    "description": "Deliver user experiences that captivate and convert with our professional UI/UX design services.",
+    "button": "Book a Design Consultation"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Mobile App Development Services by Visvik Business Solution",
+  "subtitle": "Innovate. Engage. Scale.",
+  "introduction": "At Visvik Business Solution, we specialize in creating high-performance, user-friendly mobile applications that drive business growth. Whether you need a native, hybrid, or cross-platform app, we have the expertise to bring your ideas to life.",
+  "servicesTitle": "Our Mobile App Development Services",
+  "services": [
+    { "title": "Native App Development", "description": "Description here." },
+    { "title": "Cross-Platform App Development", "description": "Description here." },
+    { "title": "App UI/UX Design", "description": "Description here." },
+    { "title": "App Testing & QA", "description": "Description here." },
+    { "title": "App Maintenance & Support", "description": "Description here." },
+    { "title": "App Integrations", "description": "Description here." }
+  ],
+  "whyChooseUsTitle": "Why Choose Visvik Business Solution?",
+  "whyChooseUs": [
+    "Custom mobile solutions tailored to your goals and needs.",
+    "Expert developers with up-to-date knowledge of tools and trends.",
+    "Scalable and secure architecture for long-term growth.",
+    "Compatible across major devices and platform support.",
+    "Client-first approach with strong post-launch support."
+  ],
+  "cta": {
+    "heading": "Ready to Turn Your App Idea Into Reality?",
+    "description": "Whether you're starting fresh or enhancing an existing app, Appz Global Tech is your trusted development partner.",
+    "button": "Contact Us to Get Started!"
+  }
+}

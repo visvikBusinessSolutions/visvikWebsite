@@ -1,0 +1,27 @@
+{
+  "title": "Website Development Services by Visvik Business Solution",
+  "subtitle": "Build. Optimize. Grow.",
+  "introduction": "At Visvik Business Solution, we deliver cutting-edge website development solutions that help your business thrive online. From responsive design to custom backend functionality, we create websites tailored to your unique needs.",
+  "servicesTitle": "Our Website Development Services",
+  "services": [
+    { "title": "Responsive Web Design", "description": "Creating mobile-friendly and visually appealing websites that work seamlessly across all devices." },
+    { "title": "Custom Website Development", "description": "Tailored websites built with the latest technologies to meet your specific business requirements." },
+    { "title": "E-commerce Development", "description": "Robust online stores with secure payment gateways and smooth shopping experiences." },
+    { "title": "Content Management Systems (CMS)", "description": "User-friendly CMS solutions like WordPress, Drupal, and Joomla for easy website management." },
+    { "title": "Website Maintenance & Support", "description": "Regular updates, security patches, and technical support to keep your website running smoothly." },
+    { "title": "API Integration & Development", "description": "Seamless integration of third-party APIs and custom backend solutions for enhanced functionality." }
+  ],
+  "whyChooseUsTitle": "Why Choose Visvik Business Solution?",
+  "whyChooseUs": [
+    "Custom web solutions tailored to your business goals.",
+    "Experienced developers skilled in modern web technologies.",
+    "SEO-friendly and performance-optimized websites.",
+    "Cross-browser and device compatibility ensured.",
+    "Dedicated support with a client-focused approach."
+  ],
+  "cta": {
+    "heading": "Ready to Elevate Your Online Presence?",
+    "description": "Whether building from scratch or revamping your current website, Visvik Business Solution is your reliable partner.",
+    "button": "Contact Us to Get Started!"
+  }
+}

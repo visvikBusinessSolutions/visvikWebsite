@@ -1,0 +1,27 @@
+{
+  "title": "DevOps Services by Visvik Business Solution",
+  "subtitle": "Automate. Accelerate. Deliver Continuously.",
+  "introduction": "At Visvik Business Solution, we empower organizations to release software faster and more reliably with modern DevOps practices. From CI/CD pipelines to infrastructure automation, we help you streamline every stage of development.",
+  "servicesTitle": "Our DevOps Services",
+  "services": [
+    { "title": "CI/CD Pipeline Setup", "description": "Implement automated build, test, and deployment pipelines for faster release cycles." },
+    { "title": "Infrastructure as Code", "description": "Provision infrastructure with tools like Terraform, CloudFormation, and Ansible." },
+    { "title": "Monitoring & Logging", "description": "Ensure visibility and reliability with tools like Prometheus, Grafana, and ELK stack." },
+    { "title": "Containerization & Orchestration", "description": "Use Docker and Kubernetes for scalable and consistent deployments." },
+    { "title": "Security & Compliance", "description": "Integrate security practices across your development pipeline with DevSecOps." },
+    { "title": "Cloud DevOps", "description": "End-to-end automation and infrastructure management on AWS, Azure, or GCP." }
+  ],
+  "whyChooseUsTitle": "Why Choose Visvik Business Solution?",
+  "whyChooseUs": [
+    "DevOps engineers with real-world enterprise experience.",
+    "Automation-first mindset to reduce manual errors.",
+    "Expertise in modern CI/CD tools and cloud platforms.",
+    "Agile practices for faster time to market.",
+    "Reliable post-implementation support and monitoring."
+  ],
+  "cta": {
+    "heading": "Streamline Your Development with DevOps",
+    "description": "Deliver better software, faster and more reliably, with Visvik's expert DevOps solutions.",
+    "button": "Get a DevOps Assessment"
+  }
+}
