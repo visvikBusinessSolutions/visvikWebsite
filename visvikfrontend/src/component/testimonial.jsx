@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
 
 const baseUrl = "https://your-base-url.com";
@@ -26,8 +26,6 @@ const pageData = {
 };
 export default function TestimonialsSection() {
   const sliderRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  console.log("currentIndex:", currentIndex);
   const settings = {
     dots: false,
     infinite: true,
@@ -37,7 +35,6 @@ export default function TestimonialsSection() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    afterChange: (index) => setCurrentIndex(index),
   };
 
   if (!data.length) {

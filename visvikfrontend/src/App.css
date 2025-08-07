@@ -1,14 +1,48 @@
 @import "tailwindcss";
-body{
-  font-family: "Source Sans Pro", sans-serif !important;
- }
+
+.btn {
+  background-color: #2563eb;         
+  color: #ffffff;                    
+  padding: 0.5rem 1rem;               
+  border-radius: 0.375rem;            
+  transition: all 0.3s ease;          
+  font-size: 0.875rem;                
+  font-weight: 600;                   
+  cursor: pointer;                    
+}
+
+.bg {
+  background: linear-gradient(135deg, #fdeedc,#ffff, #e2efff);
+}
+.btn:hover {
+  background-color: #1d4ed8;          /* Tailwind: hover:bg-blue-700 */
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+/* styles.css */
+
+.card-hover {
+  transition: transform 0.3s ease;
+  background: 0.3s ease;
+  border: 0.3s ease;
+}
+
 .card-hover:hover {
+  /* transform: scale(1.5); */
   border-right: 3px solid #3b82f6; 
   border-bottom: 3px solid #3b82f6;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-
-  /* transition: all 0.3s ease; */
+  background: linear-gradient(135deg, #fdeedc,#ffff, #e2efff);
 }
+@keyframes blink {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0 }
+}
+.blink-dot {
+  animation: blink 1s steps(2, start) infinite;
+}
+
 @keyframes slideUp {
   0% {
     opacity: 0;

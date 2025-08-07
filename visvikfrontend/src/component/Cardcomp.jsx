@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const ServiceCard = ({ icon, title, description, link, className }) => {
   return (
-    <Link to={link}>
+    <Link to={link} className="hover:scale-110">
       <div
-        className={`card-hover bg-white rounded-xl shadow-md p-6  transition duration-300 text-center cursor-pointer h-full ${className}`}
+        className={`card-hover bg-white rounded-xl shadow-md p-6  transition-transform duration-300 text-center cursor-pointer h-full ${className}`}
       >
         <div className="text-4xl mb-4 text-blue-900">{icon}</div>
         <h3 className="text-blue-900 font-semibold text-xl mb-2">{title}</h3>

@@ -24,7 +24,7 @@ const companyData = [
     items: [
       "Explore exciting opportunities to innovate, learn, and lead in technology.",
     ],
-    link: "/Careers",
+    link: "/careers",
   },
   {
     title: "Our Partners",
