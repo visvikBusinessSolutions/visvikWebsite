@@ -70,6 +70,7 @@ export default function TestimonialsSection() {
                         alt={item.client_name}
                         width={100}
                         height={100}
+                        loading="lazy"
                         className="mx-auto h-28 w-28 object-cover object-center translate-y-10 lg:translate-y-0 rounded-full border-2 border-blue-900 z-10 mb-10 md:mb-0 overflow-hidden"
                       />
                     </div>
@@ -82,11 +83,6 @@ export default function TestimonialsSection() {
                       <span className="absolute right-6 text-9xl text-right opacity-40">
                         ”
                       </span>
-                    </div>
-
-                    <div className="text-center mb-10 lg:mb-0">
-                      <p className="font-bold text-lg">{item.client_name}</p>
-                      <p>{item.client_role}</p>
                     </div>
                   </div>
                 ))}

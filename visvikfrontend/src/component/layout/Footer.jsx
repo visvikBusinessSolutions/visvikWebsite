@@ -122,13 +122,14 @@ const Footer = () => {
           >
             visvikBusinessSolution LLP
           </a>
-          , All Rights Reserved. Developed by{" "}
-          <a
+          <a href="/terms&conditons"> | Terms & Conditions</a>
+          <a href="/privacy"> | Privacy</a>
+          {/* <a
             href="/"
             className="font-semibold text-yellow-400 hover:text-yellow-300"
           >
             visvikBusinessSolution pvt ltd ,
-          </a>
+          </a> */}
         </p>
       </div>
     </>
