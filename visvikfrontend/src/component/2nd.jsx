@@ -7,28 +7,30 @@ gsap.registerPlugin(ScrollTrigger);
 
 const COMP = () => {
   useGSAP(() => {
-    gsap.fromTo(
-      ".animate-left",
-      { x: -100, y: 0, opacity: 0 },
-      {
-        x: 0,
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".animate-left",
-          start: "top 40%",
-          toggleActions: "play none none none",
-        },
-      }
-    );
+    if (window.innerWidth >= 768) {
+      gsap.fromTo(
+        ".animate-left",
+        { x: -100, y: 0, opacity: 0 },
+        {
+          x: 0,
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".animate-left",
+            start: "top 50%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
   }, []);
   return (
-    <div className="bg-slate-50 md:py-6 py-3 px-5">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center md:py-12 py-6">
+    <div className="bg px-5">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center md:py-6 py-6">
         <div className="md:col-span-4 text-gray-800 space-y-6 text-center md:text-left h-full flex flex-col justify-center">
-          <div className="animate-left space-y-4 px-2 md:px-6 lg:px-8 py-3 md:py-8">
+          <div className="animate-left space-y-4 px-2 md:px-6 lg:px-8 py-3 md:py-6">
             <h2 className="text-2xl md:text-3xl font-extrabold text-blue-900 leading-snug">
               Empowering Your Vision, Accelerating Your Growth
             </h2>

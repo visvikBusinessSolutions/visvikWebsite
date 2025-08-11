@@ -8,16 +8,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Application = () => {
   useGSAP(() => {
-    gsap.utils.toArray(".animate").forEach((el, i) => {
+    gsap.utils.toArray(".animate").forEach((el) => {
       gsap.fromTo(
         el,
         { y: -100, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 1.5,
+          duration: 0.5,
           ease: "power3.out",
-          delay: i * 0.6,
+          delay: 0,
           scrollTrigger: {
             trigger: el,
             start: "top 80%",
@@ -27,16 +27,16 @@ const Application = () => {
       );
     });
 
-    gsap.utils.toArray(".animate-right").forEach((el, i) => {
+    gsap.utils.toArray(".animate-right").forEach((el) => {
       gsap.fromTo(
         el,
         { y: -100, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 1.5,
+          duration: 0.5,
           ease: "power3.out",
-          delay: i * 0.6,
+          delay: 0,
           scrollTrigger: {
             trigger: el,
             start: "top 80%",

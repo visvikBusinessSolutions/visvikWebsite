@@ -1,17 +1,17 @@
 import Banner from "./commonbanner";
 import MobileAppServices from "./bridge";
 
-const Cyber = () => {
+const UI = () => {
   return (
     <>
       <div>
         <div>
-          <Banner title="Cyber Sercurity" details="ALL GOOD" />
-          <MobileAppServices pageKey="cybersecurity" />
+          <Banner title="UI & UX Design" details="ALL GOOD" />
+          <MobileAppServices pageKey="ui&ux" />
         </div>
       </div>
     </>
   );
 };
 
-export default Cyber;
+export default UI;

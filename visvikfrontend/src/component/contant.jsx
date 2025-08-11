@@ -28,7 +28,7 @@ const Contant = () => {
   // }, []);
 
   useGSAP(() => {
-    gsap.utils.toArray(".animate-top").forEach((el, i) => {
+    gsap.utils.toArray(".animate-top").forEach((el) => {
       gsap.fromTo(
         el,
         { y: -100, opacity: 0 },
@@ -38,11 +38,10 @@ const Contant = () => {
           opacity: 1,
           duration: 0.5,
           ease: "power3.out",
-          delay: i * 0.2,
+          delay: 0,
           scrollTrigger: {
             trigger: el,
-            start: "top 80%",
-            scrub: true,
+            start: "top 90%",
             toggleActions: "play none none none",
           },
         }
@@ -72,8 +71,8 @@ const Contant = () => {
       icon: <MdAppSettingsAlt />,
       title: "Digital Marketing Services",
       description:
-        "We build high-performance Android and iOS apps with seamless user experiences, ensuring innovation and scalability for your business.",
-      link: "/website",
+        "We craft data-driven digital marketing strategies that boost visibility, engage audiences, and drive scalable growth for your business across all online platforms.",
+      link: "/digitalmarketing",
     },
     {
       id: 4,
