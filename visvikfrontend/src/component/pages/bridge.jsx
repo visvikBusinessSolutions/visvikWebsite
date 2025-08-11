@@ -28,10 +28,10 @@ const MobileAppServices = ({ pageKey }) => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-10 text-gray-800">
-      <header className="mb-8">
+      <div className="mb-8">
         <h1 className="text-3xl font-bold text-blue-800">{content.title}</h1>
         <p className="italic text-gray-600 mt-2">{content.subtitle}</p>
-      </header>
+      </div>
       <section className="mb-10">
         <p>{content.introduction}</p>
       </section>

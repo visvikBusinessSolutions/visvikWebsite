@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
 
 const baseUrl = "https://your-base-url.com";
@@ -26,8 +26,6 @@ const pageData = {
 };
 export default function TestimonialsSection() {
   const sliderRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  console.log("currentIndex:", currentIndex);
   const settings = {
     dots: false,
     infinite: true,
@@ -37,7 +35,6 @@ export default function TestimonialsSection() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    afterChange: (index) => setCurrentIndex(index),
   };
 
   if (!data.length) {
@@ -73,6 +70,7 @@ export default function TestimonialsSection() {
                         alt={item.client_name}
                         width={100}
                         height={100}
+                        loading="lazy"
                         className="mx-auto h-28 w-28 object-cover object-center translate-y-10 lg:translate-y-0 rounded-full border-2 border-blue-900 z-10 mb-10 md:mb-0 overflow-hidden"
                       />
                     </div>
@@ -85,11 +83,6 @@ export default function TestimonialsSection() {
                       <span className="absolute right-6 text-9xl text-right opacity-40">
                         ”
                       </span>
-                    </div>
-
-                    <div className="text-center mb-10 lg:mb-0">
-                      <p className="font-bold text-lg">{item.client_name}</p>
-                      <p>{item.client_role}</p>
                     </div>
                   </div>
                 ))}

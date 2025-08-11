@@ -105,7 +105,7 @@ const Footer = () => {
                 placeholder="Your email address"
                 className="w-full bg-transparent border border-gray-600 rounded-md py-3 px-4 placeholder-gray-400 text-white focus:outline-none focus:border-yellow-400 transition"
               />
-              <button className="mt-4 w-full bg-yellow-400 text-[#011a40] font-semibold py-3 rounded-full hover:bg-yellow-500 transition">
+              <button className="mt-4 w-full bg-yellow-400 text-[#011a40] font-semibold py-3 rounded-full hover:bg-blue-100 transition">
                 Subscribe Now
               </button>
             </div>
@@ -122,13 +122,14 @@ const Footer = () => {
           >
             visvikBusinessSolution LLP
           </a>
-          , All Rights Reserved. Developed by{" "}
-          <a
+          <a href="/terms&conditons"> | Terms & Conditions</a>
+          <a href="/privacy"> | Privacy</a>
+          {/* <a
             href="/"
             className="font-semibold text-yellow-400 hover:text-yellow-300"
           >
             visvikBusinessSolution pvt ltd ,
-          </a>
+          </a> */}
         </p>
       </div>
     </>

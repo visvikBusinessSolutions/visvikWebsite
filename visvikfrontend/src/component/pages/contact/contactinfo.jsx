@@ -17,13 +17,14 @@ const INFO = () => {
           </h2>
           <p>
             Web analytics is pointless if you don't get actionable insights that
-            you can integrate into your marketing strategy. AMITKK's analysts
-            will be there to help you through the entire process. They will
-            ensure you fully understand the data and offer suggestions for
-            improving it. AMITKK is a leader in web analytics and can do it all
-            for our clients. With our cutting-edge and state-of-the-art
-            technology, we have been working hard to help our clients reach the
-            heights of success. So, stop waiting and take action.
+            you can integrate into your marketing strategy. Visvik Business
+            Solution's analysts will be there to help you through the entire
+            process. They will ensure you fully understand the data and offer
+            suggestions for improving it. Visvik Business Solution is a leader
+            in web analytics and can do it all for our clients. With our
+            cutting-edge and state-of-the-art technology, we have been working
+            hard to help our clients reach the heights of success. So, stop
+            waiting and take action.
           </p>
         </div>
 
@@ -57,7 +58,7 @@ const INFO = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-red-500 py-2 rounded-full font-bold hover:bg-red-600 text-white"
+              className="w-full bg-blue-500 py-2 rounded-full font-bold hover:bg-blue-600 text-white"
             >
               SUBMIT
             </button>

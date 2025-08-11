@@ -1,0 +1,45 @@
+{
+  "title": "Generative AI Services by Visvik Business Solution",
+  "subtitle": "Automate, Innovate, and Elevate with AI.",
+  "introduction": "Visvik Business Solution empowers organizations with cutting-edge Generative AI solutions that automate content creation, streamline operations, and unlock new levels of innovation. From text and image generation to intelligent automation, we help you harness AI’s full potential.",
+  "servicesTitle": "Our Generative AI Services",
+  "services": [
+    {
+      "title": "Custom AI Model Development",
+      "description": "Design and train bespoke AI models tailored to your business needs, using GPT, DALL·E, and other generative models."
+    },
+    {
+      "title": "AI-Powered Content Generation",
+      "description": "Automate blogs, product descriptions, emails, and more with high-quality AI-generated content."
+    },
+    {
+      "title": "Chatbots & Virtual Assistants",
+      "description": "Deploy intelligent, human-like chatbots for customer support, lead generation, and internal automation."
+    },
+    {
+      "title": "Image & Video Generation",
+      "description": "Create unique images, graphics, and videos using generative AI tools trained on your brand assets."
+    },
+    {
+      "title": "Business Process Automation",
+      "description": "Use AI to automate repetitive tasks, improve workflows, and drive operational efficiency across departments."
+    },
+    {
+      "title": "AI Integration & Consulting",
+      "description": "Seamlessly integrate generative AI into your existing systems with strategic consulting and support."
+    }
+  ],
+  "whyChooseUsTitle": "Why Partner with Visvik for Generative AI?",
+  "whyChooseUs": [
+    "Expertise in GPT, OpenAI, and other leading generative technologies.",
+    "End-to-end solutions from ideation to deployment.",
+    "Tailored AI tools that align with your business goals.",
+    "Strong focus on data privacy and ethical AI practices.",
+    "Agile approach with rapid prototyping and testing."
+  ],
+  "cta": {
+    "heading": "Let AI Work for Your Business",
+    "description": "Unlock powerful new capabilities with our enterprise-grade generative AI solutions. Let’s build the future together.",
+    "button": "Book a Free AI Consultation"
+  }
+}

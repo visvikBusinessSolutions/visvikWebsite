@@ -1,58 +1,20 @@
 import Category from "./Catagory";
-import {
-  FaAws,
-  FaCloud,
-  FaLock,
-  FaCode,
-  FaMobileAlt,
-  FaPaintBrush,
-  FaServer,
-  FaTools,
-  FaStream,
-  FaBullhorn,
-  FaNetworkWired,
-  FaRobot,
-  FaSitemap,
-  FaCogs,
-  FaShieldAlt,
-  FaDraftingCompass,
-  FaLaptopCode,
-  FaDatabase,
-  FaLaptop,
-} from "react-icons/fa";
-
 const ServicesGrid = () => {
   const data = [
     {
       title: "AI & Cloud",
       items: [
-        { label: "AWS", icon: <FaAws size={20} />, href: "/aws" },
+        { label: "AWS", icon: "./icon/aws.svg", href: "/aws" },
         {
           label: "Cybersecurity",
-          icon: <FaShieldAlt size={20} />,
-          href: "/cyber",
+          icon: "./icon/cybersecuirty.svg",
+          href: "/cybersercurity",
         },
-        { label: "Gen AI", icon: <FaRobot size={20} />, href: "/aboutus" },
+
         {
-          label: "Cloud Migration",
-          icon: <FaCloud size={20} />,
-          href: "/about",
-        },
-        {
-          label: "Security & Compliance",
-          icon: <FaLock size={20} />,
-          href: "/about",
-        },
-        { label: "DevOps", icon: <FaTools size={20} />, href: "/aboutus" },
-        {
-          label: "DevSecOps",
-          icon: <FaShieldAlt size={20} />,
+          label: "DevOps",
+          icon: "./icon/devops-engineering.svg",
           href: "/devops",
-        },
-        {
-          label: "Cloud Architecture Review",
-          icon: <FaSitemap size={20} />,
-          href: "/aboutus",
         },
       ],
     },
@@ -61,37 +23,37 @@ const ServicesGrid = () => {
       items: [
         {
           label: "Mobile App Development",
-          icon: <FaMobileAlt size={20} />,
+          icon: "./icon/mobile-app-development.svg",
           href: "/mobile",
         },
         {
           label: "Native App Development",
-          icon: <FaLaptop size={20} />,
+          icon: "./icon/native.svg",
           href: "/app",
         },
         {
           label: "Software Development",
-          icon: <FaCode size={20} />,
+          icon: "./icon/software-development.svg",
           href: "/software",
         },
         {
           label: "Cross Platform Development",
-          icon: <FaLaptopCode size={20} />,
+          icon: "./icon/h-crossplatform.svg",
           href: "/cross_platform_development",
         },
         {
           label: "IOT Development",
-          icon: <FaNetworkWired size={20} />,
+          icon: "./icon/h-iot.svg",
           href: "/iot_development",
         },
         {
           label: "UI & UX Designing",
-          icon: <FaPaintBrush size={20} />,
-          href: "/ui&ux ",
+          icon: "./icon/h-uiux.svg",
+          href: "/ui&ux",
         },
         {
           label: "Website Development",
-          icon: <FaLaptopCode size={20} />,
+          icon: "./icon/h-webdev.svg",
           href: "/website",
         },
       ],
@@ -101,27 +63,27 @@ const ServicesGrid = () => {
       items: [
         {
           label: "Digital Transformation",
-          icon: <FaCogs size={20} />,
-          href: "/aboutus",
+          icon: "./icon/h-digital-transformation.svg",
+          href: "/about",
         },
         {
           label: "Managed IT Services",
-          icon: <FaNetworkWired size={20} />,
-          href: "/aboutus",
+          icon: "./icon/managed-services.svg",
+          href: "/about",
         },
         {
           label: "Streaming Services",
-          icon: <FaStream size={20} />,
-          href: "/aboutus",
+          icon: "./icon/streaming-services.svg",
+          href: "/about",
         },
         {
           label: "Digital Marketing Services",
-          icon: <FaBullhorn size={20} />,
-          href: "/aboutus",
+          icon: "./icon/digital-marketing-services.svg",
+          href: "/about",
         },
         {
           label: "Cloud Engineering",
-          icon: <FaDatabase size={20} />,
+          icon: "./icon/h-cloud-engeering.svg",
           href: "/aboutus",
         },
       ],

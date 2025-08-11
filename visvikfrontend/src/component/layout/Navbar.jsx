@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Sidebar from "../sidebar";
@@ -8,23 +8,47 @@ import CompanyInfoMenu from "../submanu/company/company";
 const menuItems = [
   { label: "COMPANY", dropdown: true, component: <CompanyInfoMenu /> },
   { label: "SERVICES", dropdown: true, component: <ServicesGrid /> },
-  { label: "INVERSTER", dropdown: true, component: "" },
+  { label: "INVESTOR", dropdown: true, component: "" },
 ];
 
 const Navbar = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [toggle, settoggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handlemenubar = () => {
     settoggle((prev) => !prev);
   };
   return (
-    <nav className="fixed w-full px-6 md:py-6 py-4 bg-white shadow-sm flex items-center justify-between z-50">
+    <nav
+      className={`w-full px-6 bg-white shadow-sm flex items-center justify-between z-50 ${
+        scrolled ? "fixed" : "bg-transparent"
+      }`}
+    >
       <Link to="/">
-        <div className="flex items-center md:space-x-2 md:ml-8 ">
-          <img src="./visvik_contant.jpeg" alt="Logo" className="h-10 w-10" />
+        <div className="flex items-center md:space-x-2 md:ml-8 justify-center align-center">
+          <img
+            src="./headlogo.jpeg"
+            alt="Logo"
+            className="h-20 w-20 object-cover object-center"
+          />
         </div>
       </Link>
       <ul className="hidden md:flex space-x-6 items-center">
+        <div className="text-sm text-gray-700 font-medium cursor-pointer flex items-center space-x-1">
+          <Link to="/">
+            <li>HOME</li>
+          </Link>
+        </div>
+
         {menuItems.map((item, idx) => (
           <li
             key={idx}
@@ -32,19 +56,19 @@ const Navbar = () => {
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <div className="text-sm text-gray-700 font-medium hover:text-blue-600 cursor-pointer flex items-center space-x-1">
+            <div className="text-sm text-gray-700 font-medium cursor-pointer flex items-center space-x-1">
               <span>{item.label}</span>
               {item.dropdown && <span className="text-xs">▼</span>}
             </div>
             {hoveredIndex === idx && item.dropdown && item.component}
           </li>
         ))}
-        <div className="text-sm text-gray-700 font-2xl hover:text-blue-600 cursor-pointer flex items-center space-x-1">
-          <li>Blog</li>
+        <div className="text-sm text-gray-700 font-2xl cursor-pointer flex items-center space-x-1">
+          <li>BLOG</li>
         </div>
         <li>
           <Link to="/contact">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-sm font-semibold cursor-pointer">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-md  transition text-sm font-semibold cursor-pointer">
               CONTACT US
             </button>
           </Link>
@@ -59,7 +83,11 @@ const Navbar = () => {
         >
           &#9776;
         </button>
-        <Sidebar mainMenu={toggle} setMainMenu={settoggle} />
+        <Sidebar
+          mainMenu={toggle}
+          setMainMenu={settoggle}
+          // menuItems={menuItems}
+        />
       </div>
     </nav>
   );
