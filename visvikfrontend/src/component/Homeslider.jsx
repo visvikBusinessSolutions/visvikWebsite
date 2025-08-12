@@ -4,8 +4,8 @@ const MyCarousel = () => {
   return (
     <div className="w-full relative">
       <div
-        className="h-[60vh] md:h-[75vh] bg-no-repeat bg-cover bg-center"
-        style={{ backgroundImage: "url('/4.png')" }}
+        className="h-[40vh] md:h-[75vh] bg-no-repeat bg-cover bg-center"
+        style={{ backgroundImage: "url('/4.jpeg')" }}
       ></div>
 
       <div className="absolute inset-0 bg-black/40 bg-opacity-10"></div>

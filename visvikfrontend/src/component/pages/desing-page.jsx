@@ -41,7 +41,7 @@ const Desing_Page = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-blue-900 leading-snug">
-              Transform Your Ideas into Powerful Mobile Apps
+              Transform Your Ideas into Scalable AWS Solutions
             </h1>
             <h4 className="text-gray-700 text-base md:text-lg">
               We design and develop custom mobile applications for Android, iOS,

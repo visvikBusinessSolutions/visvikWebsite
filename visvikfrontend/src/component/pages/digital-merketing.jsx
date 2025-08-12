@@ -1,37 +1,31 @@
 import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
+import Card from "./temp_1";
 
+const tittle = "Our Expertise in Digital Marketing Services";
+const paragraph =
+  "Boost traffic, enhance engagement, and achieve your business goals with our innovative digital marketing service offerings.";
 const data = [
   {
-    img: "/pages_images/mobile.jpg",
-    title: "Android App Development",
-    desc: "Our team excels at building high-performance Android apps that cater to a vast user base.",
+    title: "Search Engine Optimization (SEO)",
+    description:
+      "Achieve top rankings on search engines and increase organic traffic with advanced on-page, off-page, and technical SEO solutions tailored to your industry.",
   },
   {
-    img: "/pages_images/iot.jpg",
-    title: "iOS App Development",
-    desc: "We create scalable and feature-rich iOS applications that deliver seamless performance and an intuitive user experience.",
+    title: "Pay-Per-Click Management Services",
+    description:
+      "Get instant results with our pay-per-click (PPC) advertising. We optimize campaigns across platforms like Google Ads and Bing Ads, LinkedIn, Quora, and X to deliver maximum ROI.",
   },
   {
-    img: "/pages_images/cross-platform.jpg",
-    title: "Cross-Platform App Development",
-    desc: "We build apps that deliver a native-like experience across iOS and Android with a single codebase.",
+    title: "Social Media Marketing",
+    description:
+      "Businesses should utilize the power of social media platforms to build brand awareness, foster engagement, and create a loyal customer base.",
   },
   {
-    img: "/pages_images/web-development.jpg",
-    title: "Web App Development",
-    desc: "We create fast, responsive, and modern web applications for all business needs.",
-  },
-  {
-    img: "/pages_images/ux&ui.jpg",
-    title: "UI/UX Design",
-    desc: "We design engaging, intuitive, and user-friendly interfaces to boost customer satisfaction.",
-  },
-  {
-    img: "/pages_images/app-management.jpg",
-    title: "App Maintenance & Support",
-    desc: "We ensure your apps run smoothly with ongoing maintenance, updates, and technical support.",
+    title: "Content Marketing Services",
+    description:
+      "Tell your story with compelling content. We create blogs, videos, infographics, and more to attract, educate, and convert your audience.",
   },
 ];
 const Digital_marketing = () => {
@@ -41,12 +35,12 @@ const Digital_marketing = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-blue-900 leading-snug">
-              Transform Your Ideas into Powerful Mobile Apps
+              Maximize Your Online Potential with Digital Marketing Solutions
             </h1>
             <h4 className="text-gray-700 text-base md:text-lg">
-              We design and develop custom mobile applications for Android, iOS,
-              and cross-platform — helping businesses turn ideas into innovative
-              digital solutions.
+              Build your online brand presence in today's competitive digital
+              landscape and generate revenue through effective digital marketing
+              services.
             </h4>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
               contact Now →
@@ -69,43 +63,26 @@ const Digital_marketing = () => {
       >
         <span className="absolute top-0 left-6 text-9xl text-left">“</span>
         <h3 className="md:text-4xl text-xl font-semibold mb-2">
-          Build Scalable, Engaging Mobile Apps for Android, iOS & Beyond
+          Your Partner in Digital Marketing Success
         </h3>
         <p className="mb-4">
-          Custom Mobile App Development Services by Visvik Visvik is a leading
-          mobile app development company offering end-to-end solutions for
-          Android, iOS, and cross-platform applications. In today’s
-          digital-first world, mobile apps are essential for businesses to
-          improve customer engagement, increase sales, and stay competitive.
+          Visvik is a leading digital solutions company offering end-to-end
+          services across web, mobile, and cross-platform technologies. In
+          today’s digital-first world, innovative digital solutions are
+          essential for businesses to enhance customer engagement, boost sales,
+          and maintain a competitive edge.
         </p>
         <p className="mb-4">
           At Visvik, we combine cutting-edge technology with creative design to
-          deliver intuitive and high-performing mobile applications. From
-          concept to deployment, our team ensures every app is tailored to meet
-          your business goals, enhance user satisfaction, and drive long-term
-          growth in today’s competitive market.
+          deliver intuitive and high-performing digital solutions. From concept
+          to deployment, our team ensures every project is tailored to meet your
+          business goals, enhance user satisfaction, and drive long-term growth
+          in today’s competitive market.
         </p>
 
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
-      <div className="bg md:py-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-6">
-          {data.map((item, idx) => (
-            <div
-              key={idx}
-              className="card-hover bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition"
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="h-16 w-auto mx-auto mb-4 object-contain rounded"
-              />
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Card data={data} tittle={tittle} paragraph={paragraph} />
       <ContactSection />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
