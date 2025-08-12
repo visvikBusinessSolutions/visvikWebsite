@@ -9,7 +9,7 @@ const data = [
     client_role: "CEO, Company",
     testimonial:
       "They don’t just deliver projects—they deliver peace of mind. Truly outstanding service!",
-    media_path: "./4.png",
+    media_path: "./4.jpeg",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const data = [
     client_role: "CTO, CompanyY",
     testimonial:
       "From confusion to clarity—the team guided me every step of the way. Couldn’t be happier!",
-    media_path: "./4.png",
+    media_path: "./4.jpeg",
   },
 ];
 const pageData = {
@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
                     key={item.id || item.client_name || index}
                     className="rounded-xl lg:py-10 lg:px-20 relative bg-[#dfecff] "
                   >
-                    <div>
+                    <div className="md:py-4 py-2">
                       <img
                         src={`${item.media_path}`}
                         alt={item.client_name}
@@ -94,6 +94,7 @@ export default function TestimonialsSection() {
                 <img
                   src={`${baseUrl}/${data[0].media_path}`}
                   alt={data[0].client_name}
+                  loading="lazy"
                   width={100}
                   height={100}
                   className="mx-auto w-auto hover:scale-110 transition-all duration-700 ease-in-out max-h-[100px] z-10"

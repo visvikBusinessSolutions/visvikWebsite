@@ -1,37 +1,31 @@
 import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
+import Card from "./temp_1";
 
+const tittle = "End-to-End Cross-Platform Development Services";
+const paragraph =
+  "Our experts are focused on building high-quality, robust, and feature-rich applications that work across all platforms and provide a delightful user experience.";
 const data = [
   {
-    img: "/pages_images/mobile.jpg",
-    title: "Android App Development",
-    desc: "Our team excels at building high-performance Android apps that cater to a vast user base.",
+    title: "Custom Cross-Platform App Development",
+    description:
+      "We offer custom cross-platform application development services that seamlessly run on both iOS and Android, ensuring consistent performance and a unified user experience, all while reducing development costs and time.",
   },
   {
-    img: "/pages_images/iot.jpg",
-    title: "iOS App Development",
-    desc: "We create scalable and feature-rich iOS applications that deliver seamless performance and an intuitive user experience.",
+    title: "Cross-Platform UX/UI Design",
+    description:
+      "We offer UI/UX design services for cross-platform applications that are intuitive and visually appealing. We aim to deliver a seamless experience across platforms to enhance user interaction and ensure consistency in app design across devices.",
   },
   {
-    img: "/pages_images/cross-platform.jpg",
-    title: "Cross-Platform App Development",
-    desc: "We build apps that deliver a native-like experience across iOS and Android with a single codebase.",
+    title: "Cross-Platform App Integration",
+    description:
+      "Our cross-platform app integration solution seamlessly integrates your existing application with third-party services, APIs, and backend systems to enhance functionality. We ensure that your application works seamlessly with other tools and systems to elevate the user experience.",
   },
   {
-    img: "/pages_images/web-development.jpg",
-    title: "Web App Development",
-    desc: "We create fast, responsive, and modern web applications for all business needs.",
-  },
-  {
-    img: "/pages_images/ux&ui.jpg",
-    title: "UI/UX Design",
-    desc: "We design engaging, intuitive, and user-friendly interfaces to boost customer satisfaction.",
-  },
-  {
-    img: "/pages_images/app-management.jpg",
-    title: "App Maintenance & Support",
-    desc: "We ensure your apps run smoothly with ongoing maintenance, updates, and technical support.",
+    title: "App Testing & Marketing",
+    description:
+      "Our team also delivers app testing and marketing services to all kinds of industries. They perform rigorous testing to ensure your app’s functionality, usability, and performance are flawless. Also, offers marketing efforts to enhance app visibility and user acquisition.",
   },
 ];
 const Crossplatform = () => {
@@ -41,12 +35,11 @@ const Crossplatform = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-blue-900 leading-snug">
-              Transform Your Ideas into Powerful Mobile Apps
+              Transform Your Ideas into Powerful Cross-Platform Apps
             </h1>
             <h4 className="text-gray-700 text-base md:text-lg">
-              We design and develop custom mobile applications for Android, iOS,
-              and cross-platform — helping businesses turn ideas into innovative
-              digital solutions.
+              Empower your business with efficient cross-platform solutions that
+              deliver seamless, high-performance apps across all devices.
             </h4>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
               contact Now →
@@ -69,7 +62,7 @@ const Crossplatform = () => {
       >
         <span className="absolute top-0 left-6 text-9xl text-left">“</span>
         <h3 className="md:text-4xl text-xl font-semibold mb-2">
-          Build Scalable, Engaging Mobile Apps for Android, iOS & Beyond
+          Build Scalable, Engaging Cross-Platform Apps for Android, iOS & Beyond
         </h3>
         <p className="mb-4">
           Custom Mobile App Development Services by Visvik Visvik is a leading
@@ -88,7 +81,7 @@ const Crossplatform = () => {
 
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
-      <div className="bg md:py-6">
+      {/* <div className="bg md:py-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-6">
           {data.map((item, idx) => (
             <div
@@ -105,7 +98,8 @@ const Crossplatform = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
+      <Card data={data} paragraph={paragraph} tittle={tittle} />
       <ContactSection />
       <div className="md:py-12 py-6">
         <div className="mx-auto">

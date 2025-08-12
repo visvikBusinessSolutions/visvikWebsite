@@ -22,6 +22,13 @@ import UI from "./component/pages/ui&ux.jsx";
 import Desing_Page from "./component/pages/desing-page.jsx";
 import Privacy from "./component/pages/privacy.jsx";
 import Tremscondition from "./component/pages/trems&condition.jsx";
+import Crossplatform from "./component/pages/crossplatform.jsx";
+import Iotdevelopment from "./component/pages/iot_development.jsx";
+import Digital_Transformation from "./component/pages/digital_transfromation.jsx";
+import Manageitsevices from "./component/pages/manageitsevices.jsx";
+import Streamingsevices from "./component/pages/streamingservices.jsx";
+import Cloudservices from "./component/pages/cloudengineering.jsx";
+import TeamPage from "./component/pages/TeamPage.jsx";
 
 function App() {
   return (
@@ -36,21 +43,39 @@ function App() {
           <Route path="careers" element={<Careers />} />
           <Route path="Team" element={""} />
           <Route path="contact" element={<Contact />} />
+          {/* megamenu ka ai wala */}
           <Route path="aws" element={<Aws />} />
-          <Route path="devops" element={<Devops />} />
-          <Route path="website" element={<Website />} />
-          <Route path="mobile" element={<Mobile />} />
-          <Route path="software" element={<Software />} />
-          <Route path="app" element={<Native />} />
           <Route path="cybersercurity" element={<Cyber />} />
-          {/* <Route path="genrativeai" element={<Genrative />} /> */}
-          <Route path="digitalmarketing" element={<Digital_marketing />} />
+          <Route path="devops" element={<Devops />} />
+          {/* megamenu ka design wala */}
+          <Route path="mobile" element={<Mobile />} />
+          <Route path="app" element={<Native />} />
+          <Route path="software" element={<Software />} />
+          <Route
+            path="cross_platform_development"
+            element={<Crossplatform />}
+          />
+          <Route path="iot_development" element={<Iotdevelopment />} />
           <Route path="ui&ux" element={<UI />} />
+          <Route path="website" element={<Website />} />
+          {/* Digital and it services wala */}
+          <Route
+            path="digitaltransformation"
+            element={<Digital_Transformation />}
+          />
+          <Route path="managed_it_services" element={<Manageitsevices />} />
+          <Route path="streaming_services" element={<Streamingsevices />} />
+          <Route
+            path="digital_marketing-services"
+            element={<Digital_marketing />}
+          />
+          <Route path="cloud_engineering" element={<Cloudservices />} />
+          <Route path="privacy" element={<Privacy />} />
+          <Route path="terms&conditons" element={<Tremscondition />} />
+          <Route path="TeamPage" element={<TeamPage />} />
 
           {/* temprary work */}
           <Route path="temp" element={<Desing_Page />} />
-          <Route path="privacy" element={<Privacy />} />
-          <Route path="terms&conditons" element={<Tremscondition />} />
         </Route>
 
         <Route path="/admin" element={<Admin />} />

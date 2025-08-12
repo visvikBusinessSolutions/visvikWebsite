@@ -1,39 +1,33 @@
+import { Link } from "react-router-dom";
 import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 
-const data = [
-  {
-    img: "/pages_images/mobile.jpg",
-    title: "Android App Development",
-    desc: "Our team excels at building high-performance Android apps that cater to a vast user base.",
-  },
-  {
-    img: "/pages_images/iot.jpg",
-    title: "iOS App Development",
-    desc: "We create scalable and feature-rich iOS applications that deliver seamless performance and an intuitive user experience.",
-  },
-  {
-    img: "/pages_images/cross-platform.jpg",
-    title: "Cross-Platform App Development",
-    desc: "We build apps that deliver a native-like experience across iOS and Android with a single codebase.",
-  },
-  {
-    img: "/pages_images/web-development.jpg",
-    title: "Web App Development",
-    desc: "We create fast, responsive, and modern web applications for all business needs.",
-  },
-  {
-    img: "/pages_images/ux&ui.jpg",
-    title: "UI/UX Design",
-    desc: "We design engaging, intuitive, and user-friendly interfaces to boost customer satisfaction.",
-  },
-  {
-    img: "/pages_images/app-management.jpg",
-    title: "App Maintenance & Support",
-    desc: "We ensure your apps run smoothly with ongoing maintenance, updates, and technical support.",
-  },
+const awsServices = [
+  "AWS MediaLive",
+  "AWS CloudWatch",
+  "AWS Lambda",
+  "Amazon Comprehend",
+  "AWS Elemental MediaPackage",
+  "Amazon Lex",
+  "Amazon Transcribe",
+  "Amazon EC2",
+  "AWS Elemental MediaTailor",
+  "Amazon CloudFront",
+  "Amazon Translate",
+  "AWS Kendra",
+  "AWS Elemental MediaConvert",
+  "Amazon QuickSight",
+  "Amazon DynamoDB",
+  "Amazon RDS",
+  "Amazon IVS",
+  "Amazon Pinpoint",
+  "AWS WAF",
+  "Amazon S3",
+  "Amazon Polly",
+  "Amazon EKS",
 ];
+
 const Aws = () => {
   return (
     <div className="">
@@ -41,12 +35,12 @@ const Aws = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-blue-900 leading-snug">
-              Transform Your Ideas into Powerful Mobile Apps
+              Transform Your Ideas into Scalable AWS Solutions
             </h1>
             <h4 className="text-gray-700 text-base md:text-lg">
-              We design and develop custom mobile applications for Android, iOS,
-              and cross-platform — helping businesses turn ideas into innovative
-              digital solutions.
+              We build and deploy custom AWS applications and cloud
+              architectures — enabling businesses to transform ideas into
+              powerful digital solutions
             </h4>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
               contact Now →
@@ -69,39 +63,40 @@ const Aws = () => {
       >
         <span className="absolute top-0 left-6 text-9xl text-left">“</span>
         <h3 className="md:text-4xl text-xl font-semibold mb-2">
-          Build Scalable, Engaging Mobile Apps for Android, iOS & Beyond
+          Build Scalable, High-Performance Applications on AWS
         </h3>
         <p className="mb-4">
-          Custom Mobile App Development Services by Visvik Visvik is a leading
-          mobile app development company offering end-to-end solutions for
-          Android, iOS, and cross-platform applications. In today’s
-          digital-first world, mobile apps are essential for businesses to
-          improve customer engagement, increase sales, and stay competitive.
+          AWS Cloud Solutions by Visvik — Visvik is a leading cloud consulting
+          and development company offering end-to-end solutions for businesses
+          of all sizes. In today’s digital-first world, AWS-powered solutions
+          are essential to improve scalability, enhance security, optimize
+          costs, and stay competitive
         </p>
         <p className="mb-4">
-          At Visvik, we combine cutting-edge technology with creative design to
-          deliver intuitive and high-performing mobile applications. From
-          concept to deployment, our team ensures every app is tailored to meet
-          your business goals, enhance user satisfaction, and drive long-term
+          At Visvik, we combine cutting-edge AWS cloud technology with
+          innovative architecture to deliver scalable, secure, and
+          high-performing solutions. From concept to deployment, our team
+          ensures every AWS-powered application is tailored to meet your
+          business goals, enhance operational efficiency, and drive long-term
           growth in today’s competitive market.
         </p>
 
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
-      <div className="bg md:py-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-6">
-          {data.map((item, idx) => (
+      <div className="bg-white py-10">
+        <h2 className="text-center text-2xl font-semibold mb-10">
+          End-to-End Comprehensive{" "}
+          <span className="text-blue-600">AWS Solutions</span> for Scalable and
+          Secure Operations
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
+          {awsServices.map((service, index) => (
             <div
-              key={idx}
-              className="card-hover bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition"
+              key={index}
+              className="flex items-center justify-center border border-slate-300 rounded-lg p-3 shadow hover:shadow-md transition text-center"
             >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="h-16 w-auto mx-auto mb-4 object-contain rounded"
-              />
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm">{item.desc}</p>
+              {service}
             </div>
           ))}
         </div>
@@ -122,6 +117,7 @@ const Aws = () => {
           />
         </div>
       </div>
+
       <TechTabs />
       <Temp_4 />
     </div>

@@ -14,9 +14,7 @@ const AboutUs = () => {
         </p>
       </div>
 
-      {/* Content */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        {/* Image */}
         <div className="rounded-lg overflow-hidden shadow-lg">
           <img
             src="./25.png"
@@ -26,7 +24,6 @@ const AboutUs = () => {
           />
         </div>
 
-        {/* Text */}
         <div>
           <h2 className="text-3xl font-semibold text-blue-900 mb-6">
             Our Mission

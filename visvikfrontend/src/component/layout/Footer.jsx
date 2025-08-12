@@ -3,7 +3,6 @@ import { CiMail } from "react-icons/ci";
 
 import {
   FaFacebookF,
-  FaYoutube,
   FaLinkedinIn,
   FaPhoneAlt,
   FaInstagramSquare,
@@ -32,21 +31,17 @@ const Footer = () => {
               <CiMail className="mr-3 text-yellow-400" /> contact@visvik.in
             </p>
             <div className="flex gap-4 mt-4 justify-center sm:justify-start">
-              {[
-                FaXTwitter,
-                FaFacebookF,
-                FaInstagramSquare,
-                FaYoutube,
-                FaLinkedinIn,
-              ].map((Icon, idx) => (
-                <a
-                  key={idx}
-                  href="/"
-                  className="w-9 h-9 rounded-full bg-[#02245b] flex items-center justify-center text-white text-lg shadow-md hover:bg-yellow-400 hover:text-[#011a40] transition"
-                >
-                  <Icon />
-                </a>
-              ))}
+              {[FaFacebookF, FaInstagramSquare, FaLinkedinIn].map(
+                (Icon, idx) => (
+                  <a
+                    key={idx}
+                    href="/"
+                    className="w-9 h-9 rounded-full bg-[#02245b] flex items-center justify-center text-white text-lg shadow-md hover:bg-yellow-400 hover:text-[#011a40] transition"
+                  >
+                    <Icon />
+                  </a>
+                )
+              )}
             </div>
           </div>
 
@@ -60,9 +55,8 @@ const Footer = () => {
                 { href: "/login", label: "Login" },
                 { href: "/Service", label: "Our Services" },
                 { href: "/Careers", label: "Careers" },
-                { href: "/Team", label: "Our Team" },
+                { href: "/TeamPage", label: "Our Team" },
                 { href: "/contact", label: "Contact" },
-                { href: "/Conditions", label: "Terms & Conditions" },
               ].map(({ href, label }) => (
                 <Link
                   to={href}
@@ -78,18 +72,27 @@ const Footer = () => {
 
           <div className="flex-1 min-w-[220px]">
             <h5 className="text-xl font-bold mb-6 border-b-2 border-yellow-400 pb-2">
-              Business Hours
+              Service
             </h5>
-            <div className="sm:text-left">
-              <p className="font-semibold text-white mb-1">Monday - Friday</p>
-              <h6 className="text-gray-400 mb-4">10:00 am - 07:00 pm</h6>
-
-              <p className="font-semibold text-white mb-1">Saturday</p>
-              <h6 className="text-gray-400 mb-4">09:00 am - 12:00 pm</h6>
-
-              <p className="font-semibold text-white mb-1">Sunday</p>
-              <h6 className="text-gray-400">Closed</h6>
-            </div>
+            <nav className="flex flex-col space-y-2 text-gray-300">
+              {[
+                { href: "/website", label: "Website Development" },
+                { href: "/mobile", label: "Mobile Development" },
+                { href: "/software", label: "Software Development" },
+                { href: "/iot_development", label: "IOT Development" },
+                { href: "/devops", label: "DevOps" },
+                { href: "/cloud_engineering", label: "Cloud Services" },
+              ].map(({ href, label }) => (
+                <Link
+                  to={href}
+                  key={href}
+                  href={href}
+                  className="hover:text-yellow-400 hover:underline transition"
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
           </div>
 
           <div className="flex-1 min-w-[220px]">

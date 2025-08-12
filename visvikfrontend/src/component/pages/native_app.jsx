@@ -1,7 +1,33 @@
+import Card from "./temp_1";
 import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 
+const tittle = "Our Cutting-Edge Native App Solutions";
+const paragraph =
+  "We deliver top-tier native app solutions, focusing on speed, reliability, and user satisfaction for your business.";
+const data_2 = [
+  {
+    title: "Custom Native App Development",
+    description:
+      "Our team at AppSquadz recognizes the importance of customization tailored to the specific needs of a business to ensure high performance and seamless functionality. We provide custom native app development services for all types of businesses, delivering maximum results.",
+  },
+  {
+    title: "iOS App Development",
+    description:
+      "We specialize in building intuitive and robust iOS apps. Our team leverages the iPhone operating system technologies to deliver a seamless experience for iPhone, iPad, and iWatch users. Build your application specifically for iOS users and enhance your online presence..",
+  },
+  {
+    title: "Android App Development",
+    description:
+      "We design and develop feature-rich Android apps that provide exceptional user experiences. Our experts utilize Android’s native capabilities to ensure reliability and performance on a variety of devices. Build applications, particularly for Android devices, and widen your reach to your target audience.",
+  },
+  {
+    title: "DevOps Automation Services",
+    description:
+      "Businesses can opt for our DevOps automation services to streamline repetitive tasks in their workplace. With automation, we help reduce errors in an organization, improve efficiency, and create scalable systems that align with businesses' evolving needs.",
+  },
+];
 const data = [
   {
     img: "/pages_images/mobile.jpg",
@@ -41,12 +67,13 @@ const Native = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-blue-900 leading-snug">
-              Transform Your Ideas into Powerful Mobile Apps
+              High-Performance Native Application Development Solutions
             </h1>
             <h4 className="text-gray-700 text-base md:text-lg">
-              We design and develop custom mobile applications for Android, iOS,
-              and cross-platform — helping businesses turn ideas into innovative
-              digital solutions.
+              Boost your business efficiency and drive growth with
+              high-performance native app development solutions designed for
+              optimal results. Our expertise lies in creating applications that
+              are specifically tailored for Android and iOS platforms.
             </h4>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
               contact Now →
@@ -69,18 +96,18 @@ const Native = () => {
       >
         <span className="absolute top-0 left-6 text-9xl text-left">“</span>
         <h3 className="md:text-4xl text-xl font-semibold mb-2">
-          Build Scalable, Engaging Mobile Apps for Android, iOS & Beyond
+          Build Scalable, High-Performance Native Apps for Android & iOS
         </h3>
         <p className="mb-4">
-          Custom Mobile App Development Services by Visvik Visvik is a leading
-          mobile app development company offering end-to-end solutions for
-          Android, iOS, and cross-platform applications. In today’s
-          digital-first world, mobile apps are essential for businesses to
-          improve customer engagement, increase sales, and stay competitive.
+          Custom Native App Development Services by Visvik Visvik is a leading
+          native app development company offering end-to-end solutions for
+          Android and iOS platforms. In today’s digital-first world, native apps
+          are essential for businesses to deliver seamless performance, improve
+          customer engagement, increase sales, and stay competitive
         </p>
         <p className="mb-4">
           At Visvik, we combine cutting-edge technology with creative design to
-          deliver intuitive and high-performing mobile applications. From
+          deliver intuitive and high-performing native-app applications. From
           concept to deployment, our team ensures every app is tailored to meet
           your business goals, enhance user satisfaction, and drive long-term
           growth in today’s competitive market.
@@ -88,6 +115,7 @@ const Native = () => {
 
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
+      <Card data={data_2} paragraph={paragraph} tittle={tittle} />
       <div className="bg md:py-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-6">
           {data.map((item, idx) => (

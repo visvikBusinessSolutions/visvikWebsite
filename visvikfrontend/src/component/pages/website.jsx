@@ -1,7 +1,33 @@
 import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
+import Card from "./temp_1";
 
+const tittle = "Development Expertise";
+const paragraph =
+  "Website frontend development services that are designed to cater to various business needs and requirements..";
+const data_2 = [
+  {
+    title: "Custom Web Application Development",
+    description:
+      "Work with the latest front-end technologies to create eye-pleasing and responsive user experiences. Combine your ideas and vision with expert development capabilities to deliver goal-driven solutions",
+  },
+  {
+    title: "Progressive Web Application (PWA) Development",
+    description:
+      "Enhance customer engagement by creating intuitive and engaging user interfaces that work consistently across multiple devices. Make readily accessible content to hook your users at one go and increase conversions",
+  },
+  {
+    title: "Legacy Frontend Modernization",
+    description:
+      "Our vetted front end developers complement the power of your web app with an equally appealing and intuitive user interface that converts potential leads into customers and boost the growth funnel.",
+  },
+  {
+    title: "Responsive and Mobile-First Design",
+    description:
+      "Our single page app development services revolve around using the best front-end technologies and development methodologies. Build power-packed SPAs with modern features and game-changing functionalities",
+  },
+];
 const data = [
   {
     img: "/pages_images/mobile.jpg",
@@ -41,12 +67,11 @@ const Website = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-blue-900 leading-snug">
-              Transform Your Ideas into Powerful Mobile Apps
+              Your Ideas into Powerful Websites
             </h1>
             <h4 className="text-gray-700 text-base md:text-lg">
-              We design and develop custom mobile applications for Android, iOS,
-              and cross-platform — helping businesses turn ideas into innovative
-              digital solutions.
+              We design and develop custom websites — helping businesses turn
+              ideas into innovative digital experiences.
             </h4>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
               contact Now →
@@ -69,14 +94,15 @@ const Website = () => {
       >
         <span className="absolute top-0 left-6 text-9xl text-left">“</span>
         <h3 className="md:text-4xl text-xl font-semibold mb-2">
-          Build Scalable, Engaging Mobile Apps for Android, iOS & Beyond
+          Build Scalable, Engaging Websites that Deliver Performance & Reach
+          Globally
         </h3>
         <p className="mb-4">
-          Custom Mobile App Development Services by Visvik Visvik is a leading
-          mobile app development company offering end-to-end solutions for
-          Android, iOS, and cross-platform applications. In today’s
-          digital-first world, mobile apps are essential for businesses to
-          improve customer engagement, increase sales, and stay competitive.
+          Custom Website Development Services by Visvik Visvik is a leading web
+          development company offering end-to-end solutions for dynamic,
+          responsive, and high-performing websites. In today’s digital-first
+          world, a strong online presence is essential for businesses to boost
+          brand visibility, drive sales, and stay ahead of the competition.
         </p>
         <p className="mb-4">
           At Visvik, we combine cutting-edge technology with creative design to
@@ -88,6 +114,7 @@ const Website = () => {
 
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
+      <Card data={data_2} tittle={tittle} paragraph={paragraph} />
       <div className="bg md:py-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-6">
           {data.map((item, idx) => (

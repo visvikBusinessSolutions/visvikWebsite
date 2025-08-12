@@ -8,7 +8,7 @@ import CompanyInfoMenu from "../submanu/company/company";
 const menuItems = [
   { label: "COMPANY", dropdown: true, component: <CompanyInfoMenu /> },
   { label: "SERVICES", dropdown: true, component: <ServicesGrid /> },
-  { label: "INVESTOR", dropdown: true, component: "" },
+  { label: "INVESTOR", component: "" },
 ];
 
 const Navbar = () => {
@@ -36,7 +36,7 @@ const Navbar = () => {
       <Link to="/">
         <div className="flex items-center md:space-x-2 md:ml-8 justify-center align-center">
           <img
-            src="./headlogo.jpeg"
+            src="./logo-without-bg.png"
             alt="Logo"
             className="h-20 w-20 object-cover object-center"
           />

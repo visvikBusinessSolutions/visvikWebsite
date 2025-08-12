@@ -64,27 +64,27 @@ const ServicesGrid = () => {
         {
           label: "Digital Transformation",
           icon: "./icon/h-digital-transformation.svg",
-          href: "/about",
+          href: "/digitaltransformation",
         },
         {
           label: "Managed IT Services",
           icon: "./icon/managed-services.svg",
-          href: "/about",
+          href: "/managed_it_services",
         },
         {
           label: "Streaming Services",
           icon: "./icon/streaming-services.svg",
-          href: "/about",
+          href: "/streaming_services",
         },
         {
           label: "Digital Marketing Services",
           icon: "./icon/digital-marketing-services.svg",
-          href: "/about",
+          href: "/digital_marketing-services",
         },
         {
           label: "Cloud Engineering",
           icon: "./icon/h-cloud-engeering.svg",
-          href: "/aboutus",
+          href: "/cloud_engineering",
         },
       ],
     },

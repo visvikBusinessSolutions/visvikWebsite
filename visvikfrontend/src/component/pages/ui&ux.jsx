@@ -1,37 +1,31 @@
 import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
+import Card from "./temp_1";
 
+const tittle = "Our Suite of UI/UX Design Solutions";
+const paragraph =
+  "We offer a full spectrum of UI/UX solutions to create meaningful and engaging digital interactions, ranging from initial research and strategy to dynamic interface design, usability testing, and optimization.";
 const data = [
   {
-    img: "/pages_images/mobile.jpg",
-    title: "Android App Development",
-    desc: "Our team excels at building high-performance Android apps that cater to a vast user base.",
+    title: "UI Design & Visual Branding",
+    description:
+      "We build interfaces that visually align with your brand’s identity and create memorable impressions on users",
   },
   {
-    img: "/pages_images/iot.jpg",
-    title: "iOS App Development",
-    desc: "We create scalable and feature-rich iOS applications that deliver seamless performance and an intuitive user experience.",
+    title: "UX Research & Strategy",
+    description:
+      "Our team conducts in-depth research and data analysis to understand user behavior and enhance user satisfaction and loyalty.",
   },
   {
-    img: "/pages_images/cross-platform.jpg",
-    title: "Cross-Platform App Development",
-    desc: "We build apps that deliver a native-like experience across iOS and Android with a single codebase.",
+    title: "Prototyping & Wireframing",
+    description:
+      "We create visual prototypes and wireframes to map user journeys, ensuring logical flow and intuitive navigation.",
   },
   {
-    img: "/pages_images/web-development.jpg",
-    title: "Web App Development",
-    desc: "We create fast, responsive, and modern web applications for all business needs.",
-  },
-  {
-    img: "/pages_images/ux&ui.jpg",
-    title: "UI/UX Design",
-    desc: "We design engaging, intuitive, and user-friendly interfaces to boost customer satisfaction.",
-  },
-  {
-    img: "/pages_images/app-management.jpg",
-    title: "App Maintenance & Support",
-    desc: "We ensure your apps run smoothly with ongoing maintenance, updates, and technical support.",
+    title: "Usability Testing & Optimization",
+    description:
+      "We provide continuous testing and optimization, guaranteeing a smooth and enjoyable user experience.",
   },
 ];
 const UI = () => {
@@ -41,12 +35,12 @@ const UI = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-blue-900 leading-snug">
-              Transform Your Ideas into Powerful Mobile Apps
+              Transform Your Ideas into Stunning UX & UI Designs
             </h1>
             <h4 className="text-gray-700 text-base md:text-lg">
-              We design and develop custom mobile applications for Android, iOS,
-              and cross-platform — helping businesses turn ideas into innovative
-              digital solutions.
+              We design and craft intuitive UX and UI experiences — helping
+              businesses turn concepts into visually engaging and user-friendly
+              digital products.
             </h4>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
               contact Now →
@@ -69,14 +63,14 @@ const UI = () => {
       >
         <span className="absolute top-0 left-6 text-9xl text-left">“</span>
         <h3 className="md:text-4xl text-xl font-semibold mb-2">
-          Build Scalable, Engaging Mobile Apps for Android, iOS & Beyond
+          Intuitive, Engaging UX & UI Designs for Web, Mobile & Beyond
         </h3>
         <p className="mb-4">
-          Custom Mobile App Development Services by Visvik Visvik is a leading
-          mobile app development company offering end-to-end solutions for
-          Android, iOS, and cross-platform applications. In today’s
-          digital-first world, mobile apps are essential for businesses to
-          improve customer engagement, increase sales, and stay competitive.
+          UI/UX design goes beyond aesthetics; it focuses on creating meaningful
+          interactions that resonate with users and align with your brand. With
+          a dedicated team of UI/UX experts, we build functional, easy, and
+          stunning visuals to ensure users engage effortlessly with your digital
+          platform.
         </p>
         <p className="mb-4">
           At Visvik, we combine cutting-edge technology with creative design to
@@ -85,27 +79,9 @@ const UI = () => {
           your business goals, enhance user satisfaction, and drive long-term
           growth in today’s competitive market.
         </p>
-
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
-      <div className="bg md:py-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-6">
-          {data.map((item, idx) => (
-            <div
-              key={idx}
-              className="card-hover bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition"
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="h-16 w-auto mx-auto mb-4 object-contain rounded"
-              />
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Card data={data} tittle={tittle} paragraph={paragraph} />
       <ContactSection />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
