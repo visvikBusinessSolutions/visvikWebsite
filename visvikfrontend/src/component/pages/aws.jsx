@@ -48,7 +48,7 @@ const Aws = () => {
           </div>
           <div className="flex justify-center">
             <img
-              src="./mobile-temp.png"
+              src="./pages_images/aws-banner.webp"
               alt="Mobile App Development Illustration"
               className="w-full max-w-md md:max-w-full object-contain"
             />

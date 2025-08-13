@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import Card from "./temp_1";
 import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
+import ContactPage from "./contact_details";
 
 const tittle = "Our Comprehensive Software Development Solutions";
 const paragraph =
@@ -28,6 +30,30 @@ const data = [
       "Businesses can opt for our DevOps automation services to streamline repetitive tasks in their workplace. With automation, we help reduce errors in an organization, improve efficiency, and create scalable systems that align with businesses' evolving needs.",
   },
 ];
+
+// const content = {
+//   Programming_Language: [
+//     { name: "Nodejs", icon: "/svg_file/nodejs.svg" },
+//     { name: "Firebase", icon: "/svg_file/firebase.svg" },
+//     { name: "Aws", icon: "/icon/aws.svg" },
+//   ],
+//   Cloud: [
+//     { name: "Php", icon: "/svg_file/php.svg" },
+//     { name: "Kotlin", icon: "/svg_file/kotlin.svg" },
+//     { name: "Java", icon: "/svg_file/java.svg" },
+//     { name: "JavaScript", icon: "/svg_file/javascript.svg" },
+//   ],
+//   Frameworks: [
+//     { name: "React", icon: "/svg_file/react.svg" },
+//     { name: "Flutter", icon: "/svg_file/flutter.svg" },
+//     { name: "Laravel", icon: "/svg_file/laravel.svg" },
+//   ],
+//   Database: [
+//     { name: "MySQL", icon: "/svg_file/mysql.svg" },
+//     { name: "MongoDB", icon: "/svg_file/mongo.svg" },
+//     { name: "PostgreSQL", icon: "/svg_file/postgresql.svg" },
+//   ],
+// };
 const Software = () => {
   return (
     <div className="">
@@ -35,12 +61,13 @@ const Software = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-blue-900 leading-snug">
-              Transform Your Ideas into Powerful Software Solutions
+              Delivering Prominent Software Development Solutions for Modern
+              Businesses
             </h1>
             <h4 className="text-gray-700 text-base md:text-lg">
-              We design and develop custom software solutions for web, desktop,
-              and mobile — helping businesses turn ideas into innovative digital
-              products..
+              Businesses should embrace custom software development solutions to
+              modernize operations, increase agility, and meet evolving customer
+              demands
             </h4>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
               contact Now →
@@ -48,7 +75,7 @@ const Software = () => {
           </div>
           <div className="flex justify-center">
             <img
-              src="./mobile-temp.png"
+              src="./pages_images/software-banner.png"
               alt="Mobile App Development Illustration"
               className="w-full max-w-md md:max-w-full object-contain"
             />
@@ -62,16 +89,16 @@ const Software = () => {
         }}
       >
         <span className="absolute top-0 left-6 text-9xl text-left">“</span>
-        <h3 className="md:text-4xl text-xl font-semibold mb-2">
-          Build Scalable, Engaging Software Solutions for Web, Desktop & Beyond
+        <h3 className="md:text-4xl text-xl font-semibold mb-2 text-center">
+          Visvik-Driving Digital Growth with Advanced Software Solutions
         </h3>
         <p className="mb-4">
-          Custom Software Development Services by Visvik Visvik is a leading
-          software development company offering end-to-end solutions for web,
-          desktop, and cross-platform applications. In today’s digital-first
-          world, software solutions are essential for businesses to improve
-          efficiency, enhance customer engagement, increase sales, and stay
-          competitive.
+          At Visvik Business Solution LLP, we transform business challenges into
+          powerful software solutions that drive efficiency, innovation, and
+          growth. Our expert software development team combines technical
+          excellence with strategic thinking to deliver custom applications that
+          perfectly align with your unique business objectives and provide
+          measurable value.
         </p>
         <p className="mb-4">
           At Visvik, we combine cutting-edge technology with innovative design
@@ -80,29 +107,21 @@ const Software = () => {
           meet your business goals, enhance user satisfaction, and drive
           long-term growth in today’s competitive market.
         </p>
-
+        <div className="flex justify-center md:mt-6 mt-3">
+          <Link
+            to="/software-contant"
+            className="px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition duration-300 shadow-md hover:shadow-lg"
+          >
+            Learn More
+          </Link>
+        </div>
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
-      {/* <div className="bg md:py-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto p-6">
-          {data.map((item, idx) => (
-            <div
-              key={idx}
-              className="card-hover bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition"
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="h-16 w-auto mx-auto mb-4 object-contain rounded"
-              />
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div> */}
       <Card data={data} tittle={tittle} paragraph={paragraph} />
-      <ContactSection />
+      <ContactSection
+        tittle="Searching for the Best Software Solutions? Your Search Ends Here!"
+        paragraph="Partner with Visvik for your software development needs."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -120,6 +139,7 @@ const Software = () => {
       </div>
       <TechTabs />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

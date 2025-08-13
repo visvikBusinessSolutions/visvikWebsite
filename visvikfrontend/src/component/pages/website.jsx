@@ -2,6 +2,8 @@ import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 import Card from "./temp_1";
+import { Link } from "react-router-dom";
+import ContactPage from "./contact_details";
 
 const tittle = "Development Expertise";
 const paragraph =
@@ -31,23 +33,23 @@ const data_2 = [
 const data = [
   {
     img: "/pages_images/mobile.jpg",
-    title: "Android App Development",
-    desc: "Our team excels at building high-performance Android apps that cater to a vast user base.",
+    title: "Corporate Websites",
+    desc: "Professional, brand-aligned websites that establish your market presence",
   },
   {
     img: "/pages_images/iot.jpg",
-    title: "iOS App Development",
-    desc: "We create scalable and feature-rich iOS applications that deliver seamless performance and an intuitive user experience.",
+    title: "E-Commerce Platforms",
+    desc: "Feature-rich online stores with secure payment gateways and inventory management",
   },
   {
     img: "/pages_images/cross-platform.jpg",
-    title: "Cross-Platform App Development",
-    desc: "We build apps that deliver a native-like experience across iOS and Android with a single codebase.",
+    title: "Progressive Web Apps (PWAs) ",
+    desc: "High-performance applications that work across all devices",
   },
   {
     img: "/pages_images/web-development.jpg",
     title: "Web App Development",
-    desc: "We create fast, responsive, and modern web applications for all business needs.",
+    desc: "Custom web-based software solutions to streamline business processe",
   },
   {
     img: "/pages_images/ux&ui.jpg",
@@ -56,8 +58,8 @@ const data = [
   },
   {
     img: "/pages_images/app-management.jpg",
-    title: "App Maintenance & Support",
-    desc: "We ensure your apps run smoothly with ongoing maintenance, updates, and technical support.",
+    title: "Portals & Marketplaces",
+    desc: "Multi-vendor platforms and community-based websites",
   },
 ];
 const Website = () => {
@@ -73,13 +75,15 @@ const Website = () => {
               We design and develop custom websites — helping businesses turn
               ideas into innovative digital experiences.
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
-              src="./mobile-temp.png"
+              src="./pages_images/website-banner.png"
               alt="Mobile App Development Illustration"
               className="w-full max-w-md md:max-w-full object-contain"
             />
@@ -98,11 +102,12 @@ const Website = () => {
           Globally
         </h3>
         <p className="mb-4">
-          Custom Website Development Services by Visvik Visvik is a leading web
-          development company offering end-to-end solutions for dynamic,
-          responsive, and high-performing websites. In today’s digital-first
-          world, a strong online presence is essential for businesses to boost
-          brand visibility, drive sales, and stay ahead of the competition.
+          At Visvik Business Solution LLP, we believe your website is more than
+          just an online presence—it's the digital foundation of your business,
+          a powerful marketing tool, and often your customers' first impression.
+          Our expert website development team creates bespoke, high-performance
+          websites that drive growth, enhance user engagement, and deliver
+          measurable results.
         </p>
         <p className="mb-4">
           At Visvik, we combine cutting-edge technology with creative design to
@@ -111,7 +116,14 @@ const Website = () => {
           your business goals, enhance user satisfaction, and drive long-term
           growth in today’s competitive market.
         </p>
-
+        <div className="flex justify-center md:mt-6 mt-3">
+          <Link
+            to="/website-contant"
+            className="px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition duration-300 shadow-md hover:shadow-lg"
+          >
+            Learn More
+          </Link>
+        </div>
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
       <Card data={data_2} tittle={tittle} paragraph={paragraph} />
@@ -133,7 +145,10 @@ const Website = () => {
           ))}
         </div>
       </div>
-      <ContactSection />
+      <ContactSection
+        tittle="Your Dream Website is Just a Conversation Away — Let’s Get Started!"
+        paragraph="From concept to launch, our experts make website development effortless — helping you build an online presence that keeps customers coming back."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -151,6 +166,7 @@ const Website = () => {
       </div>
       <TechTabs />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

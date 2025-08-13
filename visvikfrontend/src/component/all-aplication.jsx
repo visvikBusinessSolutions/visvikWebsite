@@ -109,7 +109,7 @@ const Application = () => {
     {
       id: 4,
       icon: <MdAppSettingsAlt />,
-      title: "Softwere Testing",
+      title: "Software Testing",
       description:
         "We build high-performance Android and iOS apps with seamless user experiences, ensuring innovation and scalability for your business.",
       animate: "animate-right",
