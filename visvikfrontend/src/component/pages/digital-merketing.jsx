@@ -2,6 +2,8 @@ import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 import Card from "./temp_1";
+import { Link } from "react-router-dom";
+import ContactPage from "./contact_details";
 
 const tittle = "Our Expertise in Digital Marketing Services";
 const paragraph =
@@ -35,12 +37,12 @@ const Digital_marketing = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-blue-900 leading-snug">
-              Maximize Your Online Potential with Digital Marketing Solutions
+              Lead the Future by Unleashing Digital Transformation with Us
             </h1>
             <h4 className="text-gray-700 text-base md:text-lg">
-              Build your online brand presence in today's competitive digital
-              landscape and generate revenue through effective digital marketing
-              services.
+              Elevate your business for the digital age with our comprehensive
+              digital transformation solutions. We help organizations evolve,
+              innovate, and thrive in an increasingly digital world.
             </h4>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
               contact Now →
@@ -48,7 +50,7 @@ const Digital_marketing = () => {
           </div>
           <div className="flex justify-center">
             <img
-              src="./mobile-temp.png"
+              src="./pages_images/digitalmarketing-banner.png"
               alt="Mobile App Development Illustration"
               className="w-full max-w-md md:max-w-full object-contain"
             />
@@ -62,15 +64,18 @@ const Digital_marketing = () => {
         }}
       >
         <span className="absolute top-0 left-6 text-9xl text-left">“</span>
-        <h3 className="md:text-4xl text-xl font-semibold mb-2">
-          Your Partner in Digital Marketing Success
+        <h3 className="md:text-4xl text-xl font-semibold mb-2 text-center">
+          Your Partner in Revolutionizing Business Through Digital Evolution
         </h3>
         <p className="mb-4">
-          Visvik is a leading digital solutions company offering end-to-end
-          services across web, mobile, and cross-platform technologies. In
-          today’s digital-first world, innovative digital solutions are
-          essential for businesses to enhance customer engagement, boost sales,
-          and maintain a competitive edge.
+          At Visvik Business Solution LLP, we understand that in today's
+          hyperconnected world, a strong digital presence is not just an
+          advantage—it's essential. Our comprehensive digital marketing services
+          combine data-driven strategies, creative excellence, and cutting-edge
+          technology to help your business thrive in the competitive digital
+          marketplace. Whether you're looking to increase brand awareness,
+          generate quality leads, or boost conversions, our expert team delivers
+          customized digital marketing solutions that drive measurable results
         </p>
         <p className="mb-4">
           At Visvik, we combine cutting-edge technology with creative design to
@@ -79,7 +84,14 @@ const Digital_marketing = () => {
           business goals, enhance user satisfaction, and drive long-term growth
           in today’s competitive market.
         </p>
-
+        <div className="flex justify-center md:mt-6 mt-3">
+          <Link
+            to="/digital-contant"
+            className="px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition duration-300 shadow-md hover:shadow-lg"
+          >
+            Learn More
+          </Link>
+        </div>
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
       <Card data={data} tittle={tittle} paragraph={paragraph} />
@@ -101,6 +113,7 @@ const Digital_marketing = () => {
       </div>
       <TechTabs />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

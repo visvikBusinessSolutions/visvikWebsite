@@ -3,7 +3,7 @@ export default function Privacy() {
     <>
       <div className="overflow-hidden w-auto md:h-[70vh] h-[30vh]">
         <img
-          src="/25.png"
+          src="/terms&privacy-banner.png"
           alt="image"
           className="w-full h-full object-cover object-center"
         />

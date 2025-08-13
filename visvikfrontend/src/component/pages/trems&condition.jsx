@@ -3,14 +3,13 @@ export default function Tremscondition() {
     <>
       <div className="overflow-hidden w-auto md:h-[70vh] h-[30vh]">
         <img
-          src="/25.png"
+          src="/terms&privacy-banner.png"
           alt="image"
           className="w-full h-full object-cover object-center"
         />
       </div>
 
       <div className="max-w-4xl mx-auto px-6 py-12 text-gray-800">
-        {/* Centered Blue Heading */}
         <h1 className="text-4xl font-bold text-blue-600 text-center mb-4 border-b-2">
           Terms and Conditions
         </h1>

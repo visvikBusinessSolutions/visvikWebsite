@@ -29,6 +29,10 @@ import Manageitsevices from "./component/pages/manageitsevices.jsx";
 import Streamingsevices from "./component/pages/streamingservices.jsx";
 import Cloudservices from "./component/pages/cloudengineering.jsx";
 import TeamPage from "./component/pages/TeamPage.jsx";
+import Website_Contant from "./contant/website-contant.jsx";
+import Mobile_contant from "./contant/mobile-contant.jsx";
+import SoftwareDevelopmentServices from "./contant/software-contant.jsx";
+import Digital_contant from "./contant/digital-contant.jsx";
 
 function App() {
   return (
@@ -73,6 +77,14 @@ function App() {
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms&conditons" element={<Tremscondition />} />
           <Route path="TeamPage" element={<TeamPage />} />
+          {/* All contant link */}
+          <Route path="website-contant" element={<Website_Contant />} />
+          <Route path="mobile-contant" element={<Mobile_contant />} />
+          <Route
+            path="software-contant"
+            element={<SoftwareDevelopmentServices />}
+          />
+          <Route path="digital-contant" element={<Digital_contant />} />
 
           {/* temprary work */}
           <Route path="temp" element={<Desing_Page />} />
