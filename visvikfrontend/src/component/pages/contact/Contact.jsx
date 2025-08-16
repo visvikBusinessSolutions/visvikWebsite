@@ -61,7 +61,7 @@ const Contact = () => {
             <ContactCard
               icon={<FaPhoneAlt />}
               title="CALL US"
-              info="+91 (120-5058519"
+              info="+91-7838826136 | +91-7982481190"
             />
             <ContactCard
               icon={<FaEnvelope />}

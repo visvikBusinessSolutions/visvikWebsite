@@ -36,11 +36,11 @@ export default function ContactPage() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <FaEnvelope className="text-blue-500 text-xl" />
-                  <span>hr@visvik.com</span>
+                  <span>contact@visvik.in</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <FaPhoneAlt className="text-blue-500 text-xl" />
-                  <span>+91-8447702224</span>
+                  <span>+91-7838826136 | +91-7982481190</span>
                 </div>
               </div>
             </div>
