@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import api from "../../api";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -16,10 +16,7 @@ const Login = () => {
     e.preventDefault();
     //send the data
     try {
-      const res = await axios.post(
-        "http://localhost:5000/v1/auth/login",
-        usersData
-      );
+      const res = api.post("/v1/auth/login", usersData);
       const data = res.data;
       console.log("Login Success:", data);
       localStorage.setItem("token", data.token);

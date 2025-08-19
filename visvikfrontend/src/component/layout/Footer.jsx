@@ -10,7 +10,17 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-
+const socialLinks = [
+  { icon: FaFacebookF, link: "https://linkedin.com/in/visvikbusinesssolution" },
+  {
+    icon: FaInstagramSquare,
+    link: "https://linkedin.com/in/visvikbusinesssolution",
+  },
+  {
+    icon: FaLinkedinIn,
+    link: "https://linkedin.com/in/visvikbusinesssolution",
+  },
+];
 const Footer = () => {
   return (
     <>
@@ -31,17 +41,20 @@ const Footer = () => {
               <CiMail className="mr-3 text-yellow-400" /> contact@visvik.in
             </p>
             <div className="flex gap-4 mt-4 justify-center sm:justify-start">
-              {[FaFacebookF, FaInstagramSquare, FaLinkedinIn].map(
-                (Icon, idx) => (
+              {socialLinks.map((data, idx) => {
+                const Icon = data.icon;
+                return (
                   <a
                     key={idx}
-                    href="/"
+                    href={data.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-9 h-9 rounded-full bg-[#02245b] flex items-center justify-center text-white text-lg shadow-md hover:bg-yellow-400 hover:text-[#011a40] transition"
                   >
                     <Icon />
                   </a>
-                )
-              )}
+                );
+              })}
             </div>
           </div>
 

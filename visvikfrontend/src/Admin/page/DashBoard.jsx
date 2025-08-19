@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Bar, Pie } from "react-chartjs-2";
 import {
@@ -32,7 +32,7 @@ export default function Dashboard() {
     accepted: 0,
     rejected: 0,
   });
-
+  //fetch application from backend
   const fetchApplicationStats = async () => {
     try {
       const res = await axios.get("http://localhost:5000/v1/applications/", {
@@ -42,9 +42,9 @@ export default function Dashboard() {
       const applications = res.data.data || [];
 
       // Count by status
-      // const pendingCount = applications.filter(
-      //   (app) => app.status === "pending"
-      // ).length;
+      const pendingCount = applications.filter(
+        (app) => app.status === "pending"
+      ).length;
       const acceptedCount = applications.filter(
         (app) => app.status === "accepted"
       ).length;
@@ -54,7 +54,7 @@ export default function Dashboard() {
 
       setStats({
         total: applications.length,
-        pending: applications.length,
+        pending: pendingCount,
         accepted: acceptedCount,
         rejected: rejectedCount,
       });
@@ -65,9 +65,9 @@ export default function Dashboard() {
     }
   };
 
-  // useEffect(() => {
-  //   fetchApplicationStats();
-  // }, []);
+  useEffect(() => {
+    fetchApplicationStats();
+  }, []);
 
   // Chart Data
   const barData = {
@@ -93,7 +93,7 @@ export default function Dashboard() {
 
   return (
     <>
-      {/* <Welcome /> */}
+      <Welcome />
       <div className="p-6">
         <h1 className="text-2xl font-semibold mb-6">Dashboard</h1>
 
