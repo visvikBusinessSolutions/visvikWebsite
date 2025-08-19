@@ -123,7 +123,7 @@ const Native = () => {
           Build Scalable, High-Performance Native Apps for Android & iOS
         </h3>
         <p className="mb-4">
-          Custom Native App Development Services by Visvik Visvik is a leading
+          Custom Native App Development Services by Visvik. Visvik is a leading
           native app development company offering end-to-end solutions for
           Android and iOS platforms. In today’s digital-first world, native apps
           are essential for businesses to deliver seamless performance, improve

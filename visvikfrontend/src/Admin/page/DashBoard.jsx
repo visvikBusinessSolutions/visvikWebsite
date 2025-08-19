@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Bar, Pie } from "react-chartjs-2";
 import {
@@ -11,6 +11,7 @@ import {
   CategoryScale,
   LinearScale,
 } from "chart.js";
+import Welcome from "../layout/TopBar";
 
 ChartJS.register(
   Title,
@@ -41,9 +42,15 @@ export default function Dashboard() {
       const applications = res.data.data || [];
 
       // Count by status
-      const pendingCount = applications.filter(app => app.status === "pending").length;
-      const acceptedCount = applications.filter(app => app.status === "accepted").length;
-      const rejectedCount = applications.filter(app => app.status === "rejected").length;
+      // const pendingCount = applications.filter(
+      //   (app) => app.status === "pending"
+      // ).length;
+      const acceptedCount = applications.filter(
+        (app) => app.status === "accepted"
+      ).length;
+      const rejectedCount = applications.filter(
+        (app) => app.status === "rejected"
+      ).length;
 
       setStats({
         total: applications.length,
@@ -58,9 +65,9 @@ export default function Dashboard() {
     }
   };
 
-  useEffect(() => {
-    fetchApplicationStats();
-  }, []);
+  // useEffect(() => {
+  //   fetchApplicationStats();
+  // }, []);
 
   // Chart Data
   const barData = {
@@ -85,48 +92,53 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-semibold mb-6">Dashboard</h1>
+    <>
+      {/* <Welcome /> */}
+      <div className="p-6">
+        <h1 className="text-2xl font-semibold mb-6">Dashboard</h1>
 
-      {/* Summary Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 mb-6">
-        <div className="bg-blue-500 text-white p-4 rounded-lg shadow-lg">
-          <h2 className="text-lg">Total Applications</h2>
-          <p
-            className="text-3xl font-bold cursor-pointer"
-            onClick={fetchApplicationStats}
-          >
-            {stats.total}
-          </p>
+        {/* Summary Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 mb-6">
+          <div className="bg-blue-500 text-white p-4 rounded-lg shadow-lg">
+            <h2 className="text-lg">Total Applications</h2>
+            <p
+              className="text-3xl font-bold cursor-pointer"
+              onClick={fetchApplicationStats}
+            >
+              {stats.total}
+            </p>
+          </div>
+          <div className="bg-yellow-500 text-white p-4 rounded-lg shadow-lg">
+            <h2 className="text-lg">Pending</h2>
+            <p className="text-3xl font-bold">{stats.pending}</p>
+          </div>
+          <div className="bg-green-500 text-white p-4 rounded-lg shadow-lg">
+            <h2 className="text-lg">Accepted</h2>
+            <p className="text-3xl font-bold">{stats.accepted}</p>
+          </div>
+          <div className="bg-red-500 text-white p-4 rounded-lg shadow-lg">
+            <h2 className="text-lg">Rejected</h2>
+            <p className="text-3xl font-bold">{stats.rejected}</p>
+          </div>
         </div>
-        <div className="bg-yellow-500 text-white p-4 rounded-lg shadow-lg">
-          <h2 className="text-lg">Pending</h2>
-          <p className="text-3xl font-bold">{stats.pending}</p>
-        </div>
-        <div className="bg-green-500 text-white p-4 rounded-lg shadow-lg">
-          <h2 className="text-lg">Accepted</h2>
-          <p className="text-3xl font-bold">{stats.accepted}</p>
-        </div>
-        <div className="bg-red-500 text-white p-4 rounded-lg shadow-lg">
-          <h2 className="text-lg">Rejected</h2>
-          <p className="text-3xl font-bold">{stats.rejected}</p>
+
+        {/* Charts */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white p-4 rounded-lg shadow-lg">
+            <h2 className="text-lg font-semibold mb-4">
+              Applications Overview
+            </h2>
+            <Bar data={barData} />
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow-lg">
+            <h2 className="text-lg font-semibold mb-4">
+              Application Status Distribution
+            </h2>
+            <Pie data={pieData} />
+          </div>
         </div>
       </div>
-
-      {/* Charts */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white p-4 rounded-lg shadow-lg">
-          <h2 className="text-lg font-semibold mb-4">Applications Overview</h2>
-          <Bar data={barData} />
-        </div>
-
-        <div className="bg-white p-4 rounded-lg shadow-lg">
-          <h2 className="text-lg font-semibold mb-4">
-            Application Status Distribution
-          </h2>
-          <Pie data={pieData} />
-        </div>
-      </div>
-    </div>
+    </>
   );
 }

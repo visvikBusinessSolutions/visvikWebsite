@@ -1,13 +1,23 @@
-import DashboardForm from "../page/testimonialchange";
-
-const Topbar = () => (
-  <>
-    <div className="h-16 bg-white shadow-md flex items-center justify-between px-4 ml-64">
-      <div className="font-semibold text-lg">Dashboard</div>
-      <div>User Menu</div>
+const Welcome = ({ userName = "VISVIK" }) => {
+  return (
+    <div
+      className="bg-gradient-to-r from-blue-50 via-white to-blue-50 
+                 p-6 sm:p-8 rounded-2xl shadow-lg mb-6 border border-gray-100
+                 opacity-0 translate-y-5 animate-fadeIn"
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          {}
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-800">
+            WELCOME, <span className="text-blue-600">{userName}</span>!
+          </h1>
+        </div>
+        <p className="text-sm sm:text-base text-gray-500 hidden sm:block">
+          Welcome to your dashboard
+        </p>
+      </div>
     </div>
-    <DashboardForm />
-  </>
-);
+  );
+};
 
-export default Topbar;
+export default Welcome;

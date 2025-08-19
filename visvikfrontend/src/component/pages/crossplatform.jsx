@@ -69,7 +69,7 @@ const Crossplatform = () => {
           Build Scalable, Engaging Cross-Platform Apps for Android, iOS & Beyond
         </h3>
         <p className="mb-4">
-          Custom Mobile App Development Services by Visvik Visvik is a leading
+          Custom Mobile App Development Services by Visvik. Visvik is a leading
           mobile app development company offering end-to-end solutions for
           Android, iOS, and cross-platform applications. In today’s
           digital-first world, mobile apps are essential for businesses to
