@@ -1,11 +1,23 @@
+import axios from "axios";
 import { useForm } from "react-hook-form";
 
 const INFO = () => {
   const { register, handleSubmit, reset } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Form Data: ", data);
-    reset();
+  // const onSubmit = (data) => {
+  //   console.log("Form Data: ", data);
+  //   reset();
+  // };
+
+  const onSubmit = async (data) => {
+    try {
+      await axios.post("http://localhost:5000/v1/queries", data);
+      alert("Message Sent Successfully!");
+      reset(); // Form clear
+    } catch (error) {
+      console.log(error);
+      alert("Failed to send message.");
+    }
   };
 
   return (
@@ -34,27 +46,31 @@ const INFO = () => {
             className="space-y-4 md:px-6 md:py-6"
           >
             <input
-              {...register("fullName", { required: true })}
+              {...register("name", { required: true })}
               type="text"
+              name="name"
               placeholder="FULL NAME*"
               className="w-full px-3 py-2 border-b-1 border-white focus:outline-none bg-transparent text-white placeholder-white"
             />
             <input
               {...register("email", { required: true })}
               type="email"
+              name="email"
               placeholder="EMAIL*"
               className="w-full px-3 py-2 border-b-1 border-white focus:outline-none bg-transparent text-white placeholder-white"
             />
             <input
-              {...register("phone", { required: true })}
+              {...register("phoneNumber", { required: true })}
               type="text"
+              name="phoneNumber"
               placeholder="PHONE NO*"
               className="w-full px-3 py-2 border-b-1 border-white focus:outline-none bg-transparent text-white placeholder-white"
             />
             <textarea
               {...register("message", { required: true })}
               placeholder="YOUR MESSAGE*"
-              className="w-full px-3 py-2 border-b-1 border-white focus:outline-none bg-transparent text-white placeholder-white"
+              name="message"
+              className="w-full px-3 py-2 border-b-1 border-white focus:outline-none bg-transparent text-white placeholder-white pointer-cursor"
             ></textarea>
             <button
               type="submit"

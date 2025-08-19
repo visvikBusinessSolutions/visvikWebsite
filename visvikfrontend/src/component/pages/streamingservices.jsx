@@ -2,6 +2,8 @@ import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 import Card from "./temp_1";
+import ContactPage from "./contact_details";
+import { Link } from "react-router-dom";
 
 const tittle =
   "Delivering Advanced Video Streaming with Gen AI Through our Streaming Services";
@@ -29,6 +31,28 @@ const data = [
       "Enhance learning experiences with our eLearning app solutions. Stream live lessons, offer on-demand courses, and incorporate interactive features to foster better engagement and knowledge retention.",
   },
 ];
+
+const content = {
+  "Frontend Technologies": [
+    { name: "React", icon: "/svg_file/react.svg" },
+    { name: "Angular", icon: "/svg_file/angular.svg" },
+  ],
+  "Backend Technologies": [
+    { name: "Nodejs", icon: "/svg_file/nodejs.svg" },
+    { name: "Python", icon: "/svg_file/python.svg" },
+    { name: "Java", icon: "/svg_file/java.svg" },
+    { name: "Firebase", icon: "/svg_file/firebase.svg" },
+  ],
+  "Content Delivery Network": [
+    { name: "AWS CloudFront", icon: "/svg_file/amazon-cloudfront.svg" },
+  ],
+  Database: [
+    { name: "MySQL", icon: "/svg_file/mysql.svg" },
+    { name: "MongoDB", icon: "/svg_file/mongo.svg" },
+    { name: "PostgreSQL", icon: "/svg_file/postgresql.svg" },
+  ],
+};
+
 const Streamingsevices = () => {
   return (
     <div className="">
@@ -43,9 +67,11 @@ const Streamingsevices = () => {
               services. We ensure secure, scalable, and seamless streaming
               experiences worldwide.
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -85,7 +111,10 @@ const Streamingsevices = () => {
       </div>
       <Card data={data} tittle={tittle} paragraph={paragraph} />
 
-      <ContactSection />
+      <ContactSection
+        tittle="Want to Unlock your Streaming Delivery Potential? Let's Connect!"
+        paragraph="We help provide high-quality video and an unmatched experience to audiences with the power of VideoCrypt."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -101,8 +130,13 @@ const Streamingsevices = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="Our Tech Stack for Advanced Streaming Solutions"
+        para="Our expertise spans the latest tools and technologies to ensure seamless performance, optimized delivery, and robust security."
+      />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

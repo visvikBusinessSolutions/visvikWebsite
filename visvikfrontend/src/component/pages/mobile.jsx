@@ -47,6 +47,30 @@ const data_2 = [
     desc: "We offer mobile app maintenance and support services to ensure your app runs smoothly and efficiently. This includes continuous monitoring, performance optimization, security updates, and feature enhancements.",
   },
 ];
+
+const content = {
+  "Backend & Cloud Services": [
+    { name: "Nodejs", icon: "/svg_file/nodejs.svg" },
+    { name: "Firebase", icon: "/svg_file/firebase.svg" },
+    { name: "Aws", icon: "/icon/aws.svg" },
+  ],
+  Language: [
+    { name: "Php", icon: "/svg_file/php.svg" },
+    { name: "Kotlin", icon: "/svg_file/kotlin.svg" },
+    { name: "Java", icon: "/svg_file/java.svg" },
+    { name: "JavaScript", icon: "/svg_file/javascript.svg" },
+  ],
+  Frameworks: [
+    { name: "React", icon: "/svg_file/react.svg" },
+    { name: "Flutter", icon: "/svg_file/flutter.svg" },
+    { name: "Laravel", icon: "/svg_file/laravel.svg" },
+  ],
+  Database: [
+    { name: "MySQL", icon: "/svg_file/mysql.svg" },
+    { name: "MongoDB", icon: "/svg_file/mongo.svg" },
+    { name: "PostgreSQL", icon: "/svg_file/postgresql.svg" },
+  ],
+};
 const Mobile = () => {
   return (
     <div className="">
@@ -61,9 +85,11 @@ const Mobile = () => {
               and cross-platform — helping businesses turn ideas into innovative
               digital solutions.
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -75,7 +101,7 @@ const Mobile = () => {
         </div>
       </div>
       <div
-        className="p-20 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
+        className="md:p-20 p-11 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
         style={{
           backgroundImage: "url('./lines-bg.webp')",
         }}
@@ -185,7 +211,11 @@ const Mobile = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="Empowering Your Mobile App with Advanced Tools & Technologies"
+        para="We stay ahead of the curve by using the latest tools and technologies in mobile app development.."
+      />
       <Temp_4 />
       <ContactPage />
     </div>

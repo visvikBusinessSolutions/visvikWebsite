@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import Card from "./temp_1";
 import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
+import ContactPage from "./contact_details";
 
 const tittle = "Our Cutting-Edge Native App Solutions";
 const paragraph =
@@ -10,7 +12,7 @@ const data_2 = [
   {
     title: "Custom Native App Development",
     description:
-      "Our team at AppSquadz recognizes the importance of customization tailored to the specific needs of a business to ensure high performance and seamless functionality. We provide custom native app development services for all types of businesses, delivering maximum results.",
+      "Our team at Visvik recognizes the importance of customization tailored to the specific needs of a business to ensure high performance and seamless functionality. We provide custom native app development services for all types of businesses, delivering maximum results.",
   },
   {
     title: "iOS App Development",
@@ -60,6 +62,26 @@ const data = [
     desc: "We ensure your apps run smoothly with ongoing maintenance, updates, and technical support.",
   },
 ];
+
+const content = {
+  "Ios Development Tools": [
+    { name: "Swift", icon: "/svg_file/swift.svg" },
+    { name: "Objective-C", icon: "/svg_file/objective-c.svg" },
+  ],
+  "Android Development Tools": [
+    { name: "Kotlin", icon: "/svg_file/kotlin.svg" },
+    { name: "Java", icon: "/svg_file/java.svg" },
+    { name: "JavaScript", icon: "/svg_file/javascript.svg" },
+  ],
+  "Testing & Debugging Tools": [
+    { name: "Appium", icon: "/svg_file/appium.svg" },
+    { name: "XCTest", icon: "/svg_file/xc-test.svg" },
+  ],
+  "Version Control & CI/CD": [
+    { name: "Git", icon: "/svg_file/git.svg" },
+    { name: "Jenkins", icon: "/svg_file/Jenkins.svg" },
+  ],
+};
 const Native = () => {
   return (
     <div className="">
@@ -75,9 +97,11 @@ const Native = () => {
               optimal results. Our expertise lies in creating applications that
               are specifically tailored for Android and iOS platforms.
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -89,7 +113,7 @@ const Native = () => {
         </div>
       </div>
       <div
-        className="p-20 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
+        className="md:p-20 p-11 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
         style={{
           backgroundImage: "url('./lines-bg.webp')",
         }}
@@ -134,7 +158,10 @@ const Native = () => {
           ))}
         </div>
       </div>
-      <ContactSection />
+      <ContactSection
+        tittle="Want a robust application for iOS or Android?"
+        paragraph="Our experts are here to create a top-tier app for your business, whether it's for an Android device or an iPhone."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -150,8 +177,13 @@ const Native = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="Versatile Tech Stack we use in Cloud Engineering"
+        para="Our flexible and adaptive tech stack meets your business's evolving needs, ensuring seamless cloud integration and performance."
+      />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

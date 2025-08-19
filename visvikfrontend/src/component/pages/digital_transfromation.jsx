@@ -2,6 +2,8 @@ import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 import Card from "./temp_1";
+import ContactPage from "./contact_details";
+import { Link } from "react-router-dom";
 
 const tittle =
   "Unlock Your Potential with Our Digital Transformation Expertise";
@@ -29,6 +31,25 @@ const data = [
       "Deliver immersive and user-centric designs and interfaces by utilizing our digital customer experience solutions. We come up with personalized designs and seamless interactive interfaces to boost engagement and customer satisfaction.",
   },
 ];
+
+const content = {
+  "Cloud Services": [{ name: "Aws", icon: "/icon/aws.svg" }],
+  "Development Technologies": [
+    { name: "Php", icon: "/svg_file/php.svg" },
+    { name: "Kotlin", icon: "/svg_file/kotlin.svg" },
+    { name: "Java", icon: "/svg_file/java.svg" },
+    { name: "Angular", icon: "/svg_file/angular.svg" },
+    { name: "JavaScript", icon: "/svg_file/javascript.svg" },
+  ],
+  "Automation & AI": [
+    { name: "TensorFlow", icon: "/svg_file/tensorFlow.svg" },
+    { name: "PyTorch", icon: "/svg_file/pyTorch.svg" },
+  ],
+  "Analytics & Business Intelligence": [
+    { name: "Power BI", icon: "/svg_file/power-bi.svg" },
+    { name: "SAS", icon: "/svg_file/sas.svg" },
+  ],
+};
 const Digital_Transformation = () => {
   return (
     <div className="">
@@ -43,9 +64,11 @@ const Digital_Transformation = () => {
               digital transformation solutions. We help organizations evolve,
               innovate, and thrive in an increasingly digital world.
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -84,7 +107,10 @@ const Digital_Transformation = () => {
       </div>
       <Card data={data} tittle={tittle} paragraph={paragraph} />
 
-      <ContactSection />
+      <ContactSection
+        tittle="Ready to Redefine Your Business? Reach Out for Consultation."
+        paragraph="We offer a combination of solutions to kickstart your digital transformation journey."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -100,8 +126,13 @@ const Digital_Transformation = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="The Advanced Tools & Technologies we use to Shape your Digital Future"
+        para="We leverage advanced tools and technologies to deliver Innovative, Secure, and Scalable Solutions ensuring seamless implementation and optimal outcomes for your digital transformation journey."
+      />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

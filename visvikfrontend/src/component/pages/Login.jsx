@@ -22,9 +22,10 @@ const Login = () => {
       );
       const data = res.data;
       console.log("Login Success:", data);
+      localStorage.setItem("token", data.token);
       navigate("/admin");
       setErrorMsg("");
-      localStorage.setItem("token", data.token);
+
       console.log("Login Success:", res.data);
     } catch (err) {
       const msg = err.response?.data?.error || "Login failed";
@@ -40,7 +41,7 @@ const Login = () => {
   } = useForm();
 
   const handleSignIn = () => setToggle(false);
-  const handleSignUp = () => setToggle(true);
+  // const handleSignUp = () => setToggle(true);
 
   return (
     <div
@@ -57,14 +58,14 @@ const Login = () => {
           >
             Sign In
           </button>
-          <button
+          {/* <button
             onClick={handleSignUp}
             className={`text-lg font-semibold border-b-4 pb-1 ${
               toggle ? "border-blue-500" : "border-transparent"
             }`}
           >
             Sign Up
-          </button>
+          </button> */}
         </div>
         {!toggle ? (
           <form onSubmit={onSubmitSignIn} className="space-y-4">

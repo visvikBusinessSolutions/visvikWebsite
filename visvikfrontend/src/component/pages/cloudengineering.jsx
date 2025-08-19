@@ -2,6 +2,8 @@ import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 import Card from "./temp_1";
+import ContactPage from "./contact_details";
+import { Link } from "react-router-dom";
 
 const tittle = "AWS powers our Cloud Engineering Services";
 const paragraph =
@@ -29,6 +31,23 @@ const data = [
   },
 ];
 
+const content = {
+  Language: [
+    { name: "Python", icon: "/svg_file/python.svg" },
+    { name: "Java", icon: "/svg_file/java.svg" },
+    { name: "JavaScript", icon: "/svg_file/javascript.svg" },
+  ],
+  Frameworks: [
+    { name: "React", icon: "/svg_file/react.svg" },
+    { name: "Angular", icon: "/svg_file/angular.svg" },
+    { name: "Laravel", icon: "/svg_file/laravel.svg" },
+  ],
+  Database: [
+    { name: "MySQL", icon: "/svg_file/mysql.svg" },
+    { name: "MongoDB", icon: "/svg_file/mongo.svg" },
+    { name: "PostgreSQL", icon: "/svg_file/postgresql.svg" },
+  ],
+};
 const Cloudservices = () => {
   return (
     <div className="">
@@ -43,9 +62,11 @@ const Cloudservices = () => {
               helping businesses turn ideas into scalable, secure, and
               innovative digital services.
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -57,7 +78,7 @@ const Cloudservices = () => {
         </div>
       </div>
       <div
-        className="p-20 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
+        className="md:p-20 p-11 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
         style={{
           backgroundImage: "url('./lines-bg.webp')",
         }}
@@ -84,7 +105,10 @@ const Cloudservices = () => {
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
       <Card data={data} tittle={tittle} paragraph={paragraph} />
-      <ContactSection />
+      <ContactSection
+        tittle="Want to drive innovation with tailored cloud solutions? Let’s get started!"
+        paragraph="Our cloud engineering experts drive scalability, efficiency, and security for your business."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -100,8 +124,13 @@ const Cloudservices = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="Versatile Tech Stack we use in Cloud Engineering"
+        para="Our flexible and adaptive tech stack meets your business's evolving needs, ensuring seamless cloud integration and performance."
+      />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

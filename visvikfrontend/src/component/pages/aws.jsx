@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import TechTabs from "./temp_2";
+// import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
+import ContactPage from "./contact_details";
 
 const awsServices = [
   "AWS MediaLive",
@@ -27,7 +28,32 @@ const awsServices = [
   "Amazon Polly",
   "Amazon EKS",
 ];
-
+const data_2 = [
+  {
+    title: "AWS Media Services",
+    desc: "We deliver a range of AWS media services to distribute video content, including Elemental MediaLive, MediaConvert, and MediaTailor. Our media services ensure high-quality video delivery.",
+  },
+  {
+    title: "AWS Migration",
+    desc: "Accelerate your cloud adoption with our AWS Migration service, which enables smooth transitions of applications, data, and workloads with minimal downtime and optimized performance.",
+  },
+  {
+    title: "Amazon CloudFront",
+    desc: "We deliver a content delivery network for secure and fast global data delivery of videos and applications. CDN with AWS CloudFront ensures secure, low-latency distribution of applications, videos, and websites.",
+  },
+  {
+    title: "Amazon Simple Storage Service (S3)",
+    desc: "We provide scalable object storage solutions for various use cases, such as backups, data lakes, and content delivery. With our Amazon S3, you can securely store, retrieve, and manage data.",
+  },
+  {
+    title: "AWS Well-Architected Review (WAR)",
+    desc: "You can optimize your cloud environment by opting for our AWS WAR service, a structured framework for reviewing and enhancing architecture for improved reliability, efficiency, and performance.",
+  },
+  {
+    title: "AWS Web Application Firewall (WAF)",
+    desc: "We offer AWS WAF service for organizations to protect their web applications from possible cyber threats. You can customize security rules and real-time monitoring to safeguard against attacks.",
+  },
+];
 const Aws = () => {
   return (
     <div className="">
@@ -42,9 +68,11 @@ const Aws = () => {
               architectures — enabling businesses to transform ideas into
               powerful digital solutions
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -56,7 +84,7 @@ const Aws = () => {
         </div>
       </div>
       <div
-        className="p-20 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
+        className="md:p-20 p-10 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
         style={{
           backgroundImage: "url('./lines-bg.webp')",
         }}
@@ -83,6 +111,33 @@ const Aws = () => {
 
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
+      <div className="bg-gray-50 md:py-10 py-6">
+        <div className="text-center max-w-3xl mx-auto px-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+            Our AWS Offerings for your Cloud Journey
+          </h2>
+          <p className="text-gray-600">
+            We offer end-to-end AWS services, ensuring seamless migration,
+            robust management, and optimized cloud solutions for scalability and
+            growth.
+          </p>
+        </div>
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
+          {data_2.map((item, idx) => (
+            <div
+              key={idx}
+              className="card-hover bg-[#f8fbfd] rounded-lg p-6 shadow-sm"
+            >
+              <h3 className="text-lg font-semibold text-gray-800 md:mb-10 mb-6">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-sm">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="bg-white py-10">
         <h2 className="text-center text-2xl font-semibold mb-10">
           End-to-End Comprehensive{" "}
@@ -101,7 +156,10 @@ const Aws = () => {
           ))}
         </div>
       </div>
-      <ContactSection />
+      <ContactSection
+        tittle="Want to Scale Your Operations with AWS Cloud? Let’s Connect!"
+        paragraph="The AWS professionals can guide you through a seamless cloud transition after understanding your requirements."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -118,8 +176,8 @@ const Aws = () => {
         </div>
       </div>
 
-      <TechTabs />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

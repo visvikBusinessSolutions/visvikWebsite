@@ -29,10 +29,15 @@ import Manageitsevices from "./component/pages/manageitsevices.jsx";
 import Streamingsevices from "./component/pages/streamingservices.jsx";
 import Cloudservices from "./component/pages/cloudengineering.jsx";
 import TeamPage from "./component/pages/TeamPage.jsx";
+import JobDetail from "./component/Jobdetails.jsx";
+import ApplyForm from "./component/JobApply.jsx";
+import ProtectedRoute from "./component/ProtectedRoute.jsx";
 import Website_Contant from "./contant/website-contant.jsx";
 import Mobile_contant from "./contant/mobile-contant.jsx";
 import SoftwareDevelopmentServices from "./contant/software-contant.jsx";
 import Digital_contant from "./contant/digital-contant.jsx";
+import CloudDevOpsServices from "./contant/devops-contant.jsx";
+import Seo from "./contant/seo-contant.jsx";
 
 function App() {
   return (
@@ -41,6 +46,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="/jobDetail/:id" element={<JobDetail />} />
+          <Route path="/apply" element={<ApplyForm />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="login" element={<Login />} />
           <Route path="Service" element={""} />
@@ -85,12 +92,26 @@ function App() {
             element={<SoftwareDevelopmentServices />}
           />
           <Route path="digital-contant" element={<Digital_contant />} />
+          <Route path="devops-contant" element={<CloudDevOpsServices />} />
+          <Route path="Seo" element={<Seo />} />
 
           {/* temprary work */}
           <Route path="temp" element={<Desing_Page />} />
         </Route>
 
-        <Route path="/admin" element={<Admin />} />
+        <Route
+          path="/admin/*"
+          element={
+            <ProtectedRoute>
+              <Admin />
+            </ProtectedRoute>
+          }
+        />
+
+        {/*         
+          <ProtectedRoute>
+            <Route path="/admin/*" element={<Admin />} />
+          </ProtectedRoute> */}
       </Routes>
     </BrowserRouter>
   );
