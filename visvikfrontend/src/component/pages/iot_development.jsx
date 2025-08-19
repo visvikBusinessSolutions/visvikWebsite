@@ -30,6 +30,31 @@ const data = [
       "Our IoT testing service ensures flawless performance, security, and reliability of IoT systems through comprehensive testing across devices, networks, and platforms.",
   },
 ];
+const content = {
+  "IOT Platform": [{ name: "Aws", icon: "/icon/aws.svg" }],
+  "Communication Protocols": [
+    { name: "Zigbee", icon: "/svg_file/zigbee.svg" },
+    { name: "MQTT", icon: "/svg_file/mqtt.svg" },
+  ],
+  "Hardware Integration": [
+    { name: "Raspberry Pi", icon: "/svg_file/raspberry.svg" },
+    {
+      name: "Custom Embedded System",
+      icon: "/svg_file/custom-embedded-system.svg",
+    },
+  ],
+  "AI & Machine Learning": [
+    {
+      name: "Predictive Analytics",
+      icon: "/svg_file/predictive-analytics.svg",
+    },
+    {
+      name: "Intelligent Automation",
+      icon: "/svg_file/intelligent-automation.svg",
+    },
+  ],
+};
+
 const Iotdevelopment = () => {
   return (
     <div className="">
@@ -107,7 +132,11 @@ const Iotdevelopment = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="Tools and Technologies we use for our IoT Development Solutions"
+        para="Explore the advanced tools and technologies we leverage to build innovative, secure, and scalable IoT development solutions."
+      />
       <Temp_4 />
       <ContactPage />
     </div>

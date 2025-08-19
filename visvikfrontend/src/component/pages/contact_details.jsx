@@ -43,14 +43,18 @@ export default function ContactPage() {
             <div>
               <h2 className="text-xl md:text-2xl font-bold mb-4">For Sales</h2>
               <div className="space-y-3 text-sm md:text-base">
-                <div className="flex items-center gap-3">
-                  <FaEnvelope className="text-blue-500 text-lg md:text-xl" />
-                  <span>sales@visvik.com</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <FaPhoneAlt className="text-blue-500 text-lg md:text-xl" />
-                  <span>+91-120-5058591 (India)</span>
-                </div>
+                <a href="mailto:contact@visvik.in">
+                  <div className="flex items-center gap-3">
+                    <FaEnvelope className="text-blue-500 text-lg md:text-xl" />
+                    <span>contact@visvik.in</span>
+                  </div>
+                </a>
+                <a href="tel:+911205058591">
+                  <div className="flex items-center gap-3 hover:text-blue-600 transition-colors duration-300">
+                    <FaPhoneAlt className="text-blue-500 text-lg md:text-xl" />
+                    <span>+91-120-5058591 (India)</span>
+                  </div>
+                </a>
               </div>
             </div>
 

@@ -62,6 +62,30 @@ const data = [
     desc: "Multi-vendor platforms and community-based websites",
   },
 ];
+
+const content = {
+  "Backend & Cloud Services": [
+    { name: "Nodejs", icon: "/svg_file/nodejs.svg" },
+    { name: "Firebase", icon: "/svg_file/firebase.svg" },
+    { name: "Aws", icon: "/icon/aws.svg" },
+  ],
+  Language: [
+    { name: "Php", icon: "/svg_file/php.svg" },
+    { name: "Kotlin", icon: "/svg_file/kotlin.svg" },
+    { name: "Java", icon: "/svg_file/java.svg" },
+    { name: "JavaScript", icon: "/svg_file/javascript.svg" },
+  ],
+  Frameworks: [
+    { name: "React", icon: "/svg_file/react.svg" },
+    { name: "Flutter", icon: "/svg_file/flutter.svg" },
+    { name: "Laravel", icon: "/svg_file/laravel.svg" },
+  ],
+  Database: [
+    { name: "MySQL", icon: "/svg_file/mysql.svg" },
+    { name: "MongoDB", icon: "/svg_file/mongo.svg" },
+    { name: "PostgreSQL", icon: "/svg_file/postgresql.svg" },
+  ],
+};
 const Website = () => {
   return (
     <div className="">
@@ -164,7 +188,11 @@ const Website = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="The Advanced Tools & Technologies we use to Power our Website Solutions"
+        para="We use modern tools, frameworks, and cloud platforms to deliver secure, scalable, and efficient Website for businesses."
+      />
       <Temp_4 />
       <ContactPage />
     </div>

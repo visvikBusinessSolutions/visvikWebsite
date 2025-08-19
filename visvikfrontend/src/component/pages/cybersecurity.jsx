@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import ContactPage from "./contact_details";
 import Card from "./temp_1";
-import TechTabs from "./temp_2";
+// import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 
@@ -114,7 +114,7 @@ const Cyber = () => {
           />
         </div>
       </div>
-      <TechTabs />
+
       <Temp_4 />
       <ContactPage />
     </div>

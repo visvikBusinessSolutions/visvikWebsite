@@ -31,6 +31,25 @@ const data = [
       "Deliver immersive and user-centric designs and interfaces by utilizing our digital customer experience solutions. We come up with personalized designs and seamless interactive interfaces to boost engagement and customer satisfaction.",
   },
 ];
+
+const content = {
+  "Cloud Services": [{ name: "Aws", icon: "/icon/aws.svg" }],
+  "Development Technologies": [
+    { name: "Php", icon: "/svg_file/php.svg" },
+    { name: "Kotlin", icon: "/svg_file/kotlin.svg" },
+    { name: "Java", icon: "/svg_file/java.svg" },
+    { name: "Angular", icon: "/svg_file/angular.svg" },
+    { name: "JavaScript", icon: "/svg_file/javascript.svg" },
+  ],
+  "Automation & AI": [
+    { name: "TensorFlow", icon: "/svg_file/tensorFlow.svg" },
+    { name: "PyTorch", icon: "/svg_file/pyTorch.svg" },
+  ],
+  "Analytics & Business Intelligence": [
+    { name: "Power BI", icon: "/svg_file/power-bi.svg" },
+    { name: "SAS", icon: "/svg_file/sas.svg" },
+  ],
+};
 const Digital_Transformation = () => {
   return (
     <div className="">
@@ -107,7 +126,11 @@ const Digital_Transformation = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="The Advanced Tools & Technologies we use to Shape your Digital Future"
+        para="We leverage advanced tools and technologies to deliver Innovative, Secure, and Scalable Solutions ensuring seamless implementation and optimal outcomes for your digital transformation journey."
+      />
       <Temp_4 />
       <ContactPage />
     </div>

@@ -62,6 +62,26 @@ const data = [
     desc: "We ensure your apps run smoothly with ongoing maintenance, updates, and technical support.",
   },
 ];
+
+const content = {
+  "Ios Development Tools": [
+    { name: "Swift", icon: "/svg_file/swift.svg" },
+    { name: "Objective-C", icon: "/svg_file/objective-c.svg" },
+  ],
+  "Android Development Tools": [
+    { name: "Kotlin", icon: "/svg_file/kotlin.svg" },
+    { name: "Java", icon: "/svg_file/java.svg" },
+    { name: "JavaScript", icon: "/svg_file/javascript.svg" },
+  ],
+  "Testing & Debugging Tools": [
+    { name: "Appium", icon: "/svg_file/appium.svg" },
+    { name: "XCTest", icon: "/svg_file/xc-test.svg" },
+  ],
+  "Version Control & CI/CD": [
+    { name: "Git", icon: "/svg_file/git.svg" },
+    { name: "Jenkins", icon: "/svg_file/Jenkins.svg" },
+  ],
+};
 const Native = () => {
   return (
     <div className="">
@@ -93,7 +113,7 @@ const Native = () => {
         </div>
       </div>
       <div
-        className="p-20 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
+        className="md:p-20 p-11 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
         style={{
           backgroundImage: "url('./lines-bg.webp')",
         }}
@@ -157,7 +177,11 @@ const Native = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="Versatile Tech Stack we use in Cloud Engineering"
+        para="Our flexible and adaptive tech stack meets your business's evolving needs, ensuring seamless cloud integration and performance."
+      />
       <Temp_4 />
       <ContactPage />
     </div>

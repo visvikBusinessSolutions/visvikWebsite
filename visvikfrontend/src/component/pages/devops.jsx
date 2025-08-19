@@ -30,6 +30,24 @@ const data = [
       "Businesses can opt for our DevOps automation services to streamline repetitive tasks in their workplace. With automation, we help reduce errors in an organization, improve efficiency, and create scalable systems that align with businesses' evolving needs.",
   },
 ];
+
+const content = {
+  "Security Tools": [
+    { name: "SonarQube", icon: "/svg_file/sonarqube.svg" },
+    { name: "Checkmarx", icon: "/svg_file/checkmarx.svg" },
+    { name: "OWASP ZAP", icon: "/svg_file/owasp.svg" },
+  ],
+  "CI/CD": [
+    { name: "Jenkins", icon: "/svg_file/Jenkins.svg" },
+    { name: "GitLab CI/CD", icon: "/svg_file/gitLab.svg" },
+    { name: "CircleCI", icon: "/svg_file/circleci.svg" },
+  ],
+  "Cloud Platform": [{ name: "Aws", icon: "/icon/aws.svg" }],
+  "Monitoring Tools": [
+    { name: "SolarWinds", icon: "/svg_file/SWI.svg" },
+    { name: "Nagios", icon: "/svg_file/nagios.svg" },
+  ],
+};
 const Devops = () => {
   return (
     <div className="">
@@ -115,7 +133,11 @@ const Devops = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="Advanced Technologies Behind Our DevSecOps Success"
+        para="Success We empower our DevSecOps services and solutions with innovative technologies, ensuring automated security checks, cloud-native protection, and real-time monitoring."
+      />
       <Temp_4 />
       <ContactPage />
     </div>

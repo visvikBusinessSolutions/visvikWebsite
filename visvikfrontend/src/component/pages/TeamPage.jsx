@@ -1,72 +1,45 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+const API_URL = "http://localhost:5000/v1/team"; // replace with your API
+
 export default function TeamPage() {
-  const bannerImage = "/Team_photo/team-banner.jpeg"; // rename to simpler name in /public for production
+  const bannerImage = "/team-banner.jpeg";
+  const [teamMembers, setTeamMembers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const founder = [
-    {
-      name: "Vishal Joshi",
-      role: "Founder & CEO",
-      image: "/Team_photo/vishal-sir.jpeg",
-    },
-    {
-      name: "Vikash Kumar",
-      role: "Designated Partner & COO",
-      image: "/Team_photo/vikash.jpeg",
-    },
-  ];
+  // Fetch team members from API
+  const fetchMembers = async () => {
+    try {
+      const res = await axios.get(API_URL, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      setTeamMembers(res.data.data || []);
+      setLoading(false);
+    } catch (err) {
+      console.error("Failed to fetch team members:", err);
+      setError("Failed to fetch team members");
+      setLoading(false);
+    }
+  };
 
-  const developmentTeam = [
-    {
-      name: "Yogesh Kumar",
-      role: "Technical Lead & DevOps",
-      image: "/Team_photo/yogesh-sir.jpeg",
-      bio: "",
-    },
-    {
-      name: "Shivam Agrhari",
-      role: "Full Stack Developer",
-      image: "/Team_photo/shivam.jpeg",
-      bio: "",
-    },
-    {
-      name: "Faiz",
-      role: "Full Stack Developer",
-      image: "/Team_photo/faizy.jpeg",
-      bio: "",
-    },
-    {
-      name: "Shahanshah",
-      role: "Front End Developer",
-      image: "/Team_photo/shahanshah.jpeg",
-      bio: "",
-    },
-    {
-      name: "Amit Kumar",
-      role: "Backend Developer",
-      image: "/Team_photo/amit.jpeg",
-      bio: "",
-    },
-    {
-      name: "Renuka",
-      role: "UI/UX Designer",
-      image: "/Team_photo/renuka.jpeg",
-      bio: "",
-    },
-  ];
+  useEffect(() => {
+    fetchMembers();
+  }, []);
 
-  const bdeTeam = [
-    {
-      name: "Sarita",
-      role: "Business Development Executive",
-      image: "/Team_photo/bd-2.jpeg",
-      bio: "Builds partnerships and brings in new opportunities.",
-    },
-    {
-      name: "Tanya",
-      role: "Business Development Executive",
-      image: "/Team_photo/bd-1.jpeg",
-      bio: "Expands our reach by building strategic partnerships.",
-    },
-  ];
+  // Group team members by roleType
+  const groupByRole = (members) => {
+    const groups = {};
+    members.forEach((member) => {
+      const role = member.department || "others";
+      if (!groups[role]) groups[role] = [];
+      groups[role].push(member);
+    });
+    return groups;
+  };
 
   const renderTeam = (team, heading, center = false) => (
     <>
@@ -83,13 +56,12 @@ export default function TeamPage() {
               className="rounded-2xl p-6 text-center transition duration-300"
             >
               <img
-                src={member.image}
+                src={member.image || "/Team_photo/placeholder.png"}
                 alt={member.name}
                 className="w-24 h-24 mx-auto rounded-full mb-4 border-4 border-gray-200"
               />
               <h3 className="text-xl font-semibold">{member.name}</h3>
-              <p className="text-gray-500 mb-2">{member.role}</p>
-              <p className="text-gray-700 text-sm">{member.bio}</p>
+              <p className="text-gray-500 mb-2">{member.designation}</p>
             </div>
           ))}
         </div>
@@ -101,12 +73,12 @@ export default function TeamPage() {
               className="rounded-2xl p-6 text-center transition duration-300"
             >
               <img
-                src={member.image}
+                src={member.image || "/Team_photo/placeholder.png"}
                 alt={member.name}
                 className="w-24 h-24 mx-auto rounded-full mb-4 border-4 border-gray-200"
               />
               <h3 className="text-xl font-semibold">{member.name}</h3>
-              <p className="text-gray-500 mb-2">{member.role}</p>
+              <p className="text-gray-500 mb-2">{member.designation}</p>
               <p className="text-gray-700 text-sm">{member.bio}</p>
             </div>
           ))}
@@ -114,6 +86,13 @@ export default function TeamPage() {
       )}
     </>
   );
+
+  if (loading)
+    return <p className="text-center mt-12 text-lg">Loading team members...</p>;
+
+  if (error) return <p className="text-center mt-12 text-red-500">{error}</p>;
+
+  const groupedMembers = groupByRole(teamMembers);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -143,10 +122,22 @@ export default function TeamPage() {
           Meet Our Team
         </h1>
 
-        {/* Sections */}
-        {renderTeam(founder, null, true)}
-        {renderTeam(developmentTeam, "Development Team")}
-        {renderTeam(bdeTeam, "Business Development Executives")}
+        {/* Render team sections dynamically */}
+        {groupedMembers["founder"] &&
+          renderTeam(groupedMembers["founder"], "VisVik Founder", true)}
+        {groupedMembers["development"] &&
+          renderTeam(groupedMembers["development"], "Development Team", true)}
+        {groupedMembers["bde"] &&
+          renderTeam(groupedMembers["bde"], "Business Development Executives")}
+        {/* Render any other roles */}
+        {Object.keys(groupedMembers).map(
+          (role) =>
+            !["founder", "development", "bde"].includes(role) &&
+            renderTeam(
+              groupedMembers[role],
+              role.charAt(0).toUpperCase() + role.slice(1)
+            )
+        )}
       </div>
     </div>
   );

@@ -7,27 +7,28 @@ const Contact = () => {
       <div>
         <div className="">
           <div
-            className="relative w-full h-[20vh] md:h-[75vh] bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/contact-banner.png')" }}
+            className="relative w-full h-[40vh] md:h-[75vh] bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/contactus-banner.jpg')" }}
           >
             <div className="absolute inset-0 bg-black/40"></div>
 
-            {/* <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 space-y-4">
-              <h2 className="text-orange-500 text-xl md:text-5xl font-bold animate-slideUp">
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 space-y-4">
+              <h2 className="text-white text-xl md:text-5xl font-extrabold animate-slideUp">
                 CONTACT US
               </h2>
 
-              <p className="text-white text-sm md:text-base max-w-2xl font-bold animate-slideUp">
+              <p className="hidden md:block text-white text-sm md:text-2xl max-w-2xl font-bold animate-slideUp">
                 ...................................................
               </p>
 
-              <p className="text-white text-sm md:text-base max-w-2xl animate-slideUp">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                vitae ullam nobis. Minus reprehenderit, vitae aliquam illo in
-                pariatur omnis voluptatem optio, odio est culpa velit, impedit
-                sed eius provident.
+              <p className="hidden md:block text-white text-sm md:text-xl max-w-2xl animate-slideUp">
+                Get in touch with us today to transform your ideas into reality.
+                Our team is always ready to assist you with tailored solutions,
+                expert guidance, and seamless support. Whether you’re looking
+                for collaboration, services, or just have a query, we’d love to
+                hear from you. Let’s build something extraordinary together!.
               </p>
-            </div> */}
+            </div>
           </div>
           <div className="">
             <INFO></INFO>
@@ -57,16 +58,20 @@ const Contact = () => {
               title="VISIT US"
               info="C 30 Sector 63, Noida, (201301)"
             />
-            <ContactCard
-              icon={<FaPhoneAlt />}
-              title="CALL US"
-              info="+91-7838826136 | +91-7982481190"
-            />
-            <ContactCard
-              icon={<FaEnvelope />}
-              title="CONTACT US"
-              info="contact@visvik.in"
-            />
+            <a href="tel:+911205058591">
+              <ContactCard
+                icon={<FaPhoneAlt />}
+                title="CALL US"
+                info="+91-120-5058591"
+              />
+            </a>
+            <a href="mailto:contact@visvik.in">
+              <ContactCard
+                icon={<FaEnvelope />}
+                title="CONTACT US"
+                info="contact@visvik.in"
+              />
+            </a>
           </div>
         </div>
       </div>

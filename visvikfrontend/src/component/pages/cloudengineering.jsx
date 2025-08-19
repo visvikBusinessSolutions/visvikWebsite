@@ -31,6 +31,23 @@ const data = [
   },
 ];
 
+const content = {
+  Language: [
+    { name: "Python", icon: "/svg_file/python.svg" },
+    { name: "Java", icon: "/svg_file/java.svg" },
+    { name: "JavaScript", icon: "/svg_file/javascript.svg" },
+  ],
+  Frameworks: [
+    { name: "React", icon: "/svg_file/react.svg" },
+    { name: "Angular", icon: "/svg_file/angular.svg" },
+    { name: "Laravel", icon: "/svg_file/laravel.svg" },
+  ],
+  Database: [
+    { name: "MySQL", icon: "/svg_file/mysql.svg" },
+    { name: "MongoDB", icon: "/svg_file/mongo.svg" },
+    { name: "PostgreSQL", icon: "/svg_file/postgresql.svg" },
+  ],
+};
 const Cloudservices = () => {
   return (
     <div className="">
@@ -107,7 +124,11 @@ const Cloudservices = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="Versatile Tech Stack we use in Cloud Engineering"
+        para="Our flexible and adaptive tech stack meets your business's evolving needs, ensuring seamless cloud integration and performance."
+      />
       <Temp_4 />
       <ContactPage />
     </div>

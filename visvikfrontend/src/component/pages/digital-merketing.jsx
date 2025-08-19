@@ -1,4 +1,4 @@
-import TechTabs from "./temp_2";
+// import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 import Card from "./temp_1";
@@ -116,7 +116,6 @@ const Digital_marketing = () => {
           />
         </div>
       </div>
-      <TechTabs />
       <Temp_4 />
       <ContactPage />
     </div>

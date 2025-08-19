@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="bg-[#011a40] text-white py-16 px-5 font-sans">
         <div className="max-w-7xl mx-auto flex flex-wrap gap-10 justify-between">
           <div className="flex-1 min-w-[220px]">
-            <h5 className="text-xl font-bold mb-6 border-b-2 border-yellow-400 pb-2">
+            <h5 className="text-xl font-bold mb-6 border-b-2 border-white pb-2">
               Our Office Address
             </h5>
             <p className="mb-3 flex items-center text-gray-300">
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
 
           <div className="flex-1 min-w-[220px]">
-            <h5 className="text-xl font-bold mb-6 border-b-2 border-yellow-400 pb-2">
+            <h5 className="text-xl font-bold mb-6 border-b-2 border-white pb-2">
               Quick Links
             </h5>
             <nav className="flex flex-col space-y-2 text-gray-300">
@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
 
           <div className="flex-1 min-w-[220px]">
-            <h5 className="text-xl font-bold mb-6 border-b-2 border-yellow-400 pb-2">
+            <h5 className="text-xl font-bold mb-6 border-b-2 border-white pb-2">
               Service
             </h5>
             <nav className="flex flex-col space-y-2 text-gray-300">
@@ -96,7 +96,7 @@ const Footer = () => {
           </div>
 
           <div className="flex-1 min-w-[220px]">
-            <h5 className="text-xl font-bold mb-6 border-b-2 border-yellow-400 pb-2">
+            <h5 className="text-xl font-bold mb-6 border-b-2 border-white pb-2">
               Newsletter
             </h5>
             <p className="text-gray-400 mb-5 text-center sm:text-left">
@@ -108,7 +108,7 @@ const Footer = () => {
                 placeholder="Your email address"
                 className="w-full bg-transparent border border-gray-600 rounded-md py-3 px-4 placeholder-gray-400 text-white focus:outline-none focus:border-yellow-400 transition"
               />
-              <button className="mt-4 w-full bg-yellow-400 text-[#011a40] font-semibold py-3 rounded-full hover:bg-blue-100 transition">
+              <button className="text-black mt-4 w-full bg-white font-semibold py-3 rounded-full hover:bg-blue-100 hover:text-black transition">
                 Subscribe Now
               </button>
             </div>

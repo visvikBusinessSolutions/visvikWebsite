@@ -31,6 +31,28 @@ const data = [
       "Enhance learning experiences with our eLearning app solutions. Stream live lessons, offer on-demand courses, and incorporate interactive features to foster better engagement and knowledge retention.",
   },
 ];
+
+const content = {
+  "Frontend Technologies": [
+    { name: "React", icon: "/svg_file/react.svg" },
+    { name: "Angular", icon: "/svg_file/angular.svg" },
+  ],
+  "Backend Technologies": [
+    { name: "Nodejs", icon: "/svg_file/nodejs.svg" },
+    { name: "Python", icon: "/svg_file/python.svg" },
+    { name: "Java", icon: "/svg_file/java.svg" },
+    { name: "Firebase", icon: "/svg_file/firebase.svg" },
+  ],
+  "Content Delivery Network": [
+    { name: "AWS CloudFront", icon: "/svg_file/amazon-cloudfront.svg" },
+  ],
+  Database: [
+    { name: "MySQL", icon: "/svg_file/mysql.svg" },
+    { name: "MongoDB", icon: "/svg_file/mongo.svg" },
+    { name: "PostgreSQL", icon: "/svg_file/postgresql.svg" },
+  ],
+};
+
 const Streamingsevices = () => {
   return (
     <div className="">
@@ -108,7 +130,11 @@ const Streamingsevices = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="Our Tech Stack for Advanced Streaming Solutions"
+        para="Our expertise spans the latest tools and technologies to ensure seamless performance, optimized delivery, and robust security."
+      />
       <Temp_4 />
       <ContactPage />
     </div>

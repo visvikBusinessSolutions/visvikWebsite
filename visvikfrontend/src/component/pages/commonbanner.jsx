@@ -3,7 +3,7 @@ import React from "react";
 const Banner = (props) => {
   return (
     <div className="relative w-full h-64 md:h-96 overflow-hidden bg-gray-800">
-      <div className="absolute inset-0 bg-[url('./23.png')] bg-cover bg-center opacity-70"></div>
+      <div className="absolute inset-0 bg-[url('./carrer-banner.png')] bg-cover bg-center opacity-70"></div>
 
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center px-4">

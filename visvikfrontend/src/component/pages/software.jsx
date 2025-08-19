@@ -30,30 +30,27 @@ const data = [
       "Businesses can opt for our DevOps automation services to streamline repetitive tasks in their workplace. With automation, we help reduce errors in an organization, improve efficiency, and create scalable systems that align with businesses' evolving needs.",
   },
 ];
+const content = {
+  Language: [
+    { name: "Php", icon: "/svg_file/php.svg" },
+    { name: "Kotlin", icon: "/svg_file/kotlin.svg" },
+    { name: "Java", icon: "/svg_file/java.svg" },
+    { name: "JavaScript", icon: "/svg_file/javascript.svg" },
+  ],
+  Frameworks: [
+    { name: "React", icon: "/svg_file/react.svg" },
+    { name: "Flutter", icon: "/svg_file/flutter.svg" },
+    { name: "Laravel", icon: "/svg_file/laravel.svg" },
+  ],
+  Cloud: [{ name: "Aws", icon: "/icon/aws.svg" }],
+  Database: [
+    { name: "MySQL", icon: "/svg_file/mysql.svg" },
+    { name: "MongoDB", icon: "/svg_file/mongo.svg" },
+    { name: "PostgreSQL", icon: "/svg_file/postgresql.svg" },
+    { name: "Oracle", icon: "/svg_file/oracle.svg" },
+  ],
+};
 
-// const content = {
-//   Programming_Language: [
-//     { name: "Nodejs", icon: "/svg_file/nodejs.svg" },
-//     { name: "Firebase", icon: "/svg_file/firebase.svg" },
-//     { name: "Aws", icon: "/icon/aws.svg" },
-//   ],
-//   Cloud: [
-//     { name: "Php", icon: "/svg_file/php.svg" },
-//     { name: "Kotlin", icon: "/svg_file/kotlin.svg" },
-//     { name: "Java", icon: "/svg_file/java.svg" },
-//     { name: "JavaScript", icon: "/svg_file/javascript.svg" },
-//   ],
-//   Frameworks: [
-//     { name: "React", icon: "/svg_file/react.svg" },
-//     { name: "Flutter", icon: "/svg_file/flutter.svg" },
-//     { name: "Laravel", icon: "/svg_file/laravel.svg" },
-//   ],
-//   Database: [
-//     { name: "MySQL", icon: "/svg_file/mysql.svg" },
-//     { name: "MongoDB", icon: "/svg_file/mongo.svg" },
-//     { name: "PostgreSQL", icon: "/svg_file/postgresql.svg" },
-//   ],
-// };
 const Software = () => {
   return (
     <div className="">
@@ -85,7 +82,7 @@ const Software = () => {
         </div>
       </div>
       <div
-        className="p-20 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
+        className="md:p-20 p-11 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
         style={{
           backgroundImage: "url('./lines-bg.webp')",
         }}
@@ -139,7 +136,11 @@ const Software = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="The Advanced Tools & Technologies we use for Software Development"
+        para="Our advanced tech stack ensures innovative, high-performing, and reliable software solutions tailored to your business needs."
+      />
       <Temp_4 />
       <ContactPage />
     </div>

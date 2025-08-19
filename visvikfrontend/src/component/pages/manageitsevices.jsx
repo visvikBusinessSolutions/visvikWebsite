@@ -30,7 +30,24 @@ const data = [
       "Security is our top priority. Our cybersecurity experts deploy advanced protection to safeguard your systems from threats, including malware, ransomware, and data breaches, ensuring your business remains secure.",
   },
 ];
-
+const content = {
+  "Cloud platform": [{ name: "Aws", icon: "/icon/aws.svg" }],
+  "Security Solution": [
+    { name: "Fortinet", icon: "/svg_file/fortinet.svg" },
+    {
+      name: "Palo Alto Networks",
+      icon: "/svg_file/palo-alto-networks-svgrepo-com.svg",
+    },
+  ],
+  "Backup Recovery Tools": [
+    { name: "Veeam", icon: "/svg_file/veeam.svg" },
+    { name: "Acronis", icon: "/svg_file/acronis.svg" },
+  ],
+  "Monitoring Tools": [
+    { name: "SolarWinds", icon: "/svg_file/SWI.svg" },
+    { name: "Nagios", icon: "/svg_file/nagios.svg" },
+  ],
+};
 const Manageitsevices = () => {
   return (
     <div className="">
@@ -89,8 +106,8 @@ const Manageitsevices = () => {
       </div>
       <Card data={data} tittle={tittle} paragraph={paragraph} />
       <ContactSection
-        tittle="Want to Enhance your Business with Expert IT Management? Contact Us!"
-        paragraph="Our team ensures your IT operations stay secure, efficient, and reliable in this digitalized landscape."
+        tittle="Next-Gen Tools & Technologies we use to Secure and Optimize Your IT Infrastructure"
+        paragraph="We utilize next-gen tools and technologies to enhance security, streamline operations, and optimize your IT infrastructure for the best performance."
       />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
@@ -107,7 +124,11 @@ const Manageitsevices = () => {
           />
         </div>
       </div>
-      <TechTabs />
+      <TechTabs
+        content={content}
+        tittle="Versatile Tech Stack we use in Cloud Engineering"
+        para="Our flexible and adaptive tech stack meets your business's evolving needs, ensuring seamless cloud integration and performance."
+      />
       <Temp_4 />
       <ContactPage />
     </div>
