@@ -220,7 +220,7 @@
 
 import React from "react";
 import { FaEnvelope, FaPhoneAlt, FaPaperclip } from "react-icons/fa";
-import api from "../api";
+import api from "../../api";
 
 export default function ContactPage() {
   const handleSubmit = async (e) => {
