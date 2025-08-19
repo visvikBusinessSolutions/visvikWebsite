@@ -149,7 +149,7 @@ export default function ApplicationManagement() {
                   View
                 </button>
                 <button
-                  onClick={() => handleDelete(app._id)}
+                  onClick={() => handleDelete(app.id)}
                   className="bg-red-500 text-white px-2 py-1 rounded"
                 >
                   Delete
