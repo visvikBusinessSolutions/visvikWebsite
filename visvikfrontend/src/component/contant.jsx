@@ -72,7 +72,7 @@ const Contant = () => {
       title: "Digital Marketing Services",
       description:
         "We craft data-driven digital marketing strategies that boost visibility, engage audiences, and drive scalable growth for your business across all online platforms.",
-      link: "/digitalmarketing",
+      link: "/digital_marketing-services",
     },
     {
       id: 4,
@@ -80,23 +80,23 @@ const Contant = () => {
       title: "Software Development",
       description:
         "We build high-performance Android and iOS apps with seamless user experiences, ensuring innovation and scalability for your business.",
-      link: "/website",
+      link: "/software",
     },
     {
       id: 5,
       icon: <MdAppSettingsAlt />,
-      title: "Affiliated Marketing Services",
+      title: "IOT DEVELOPMENT",
       description:
-        "We build high-performance Android and iOS apps with seamless user experiences, ensuring innovation and scalability for your business.",
-      link: "/website",
+        "We design and develop innovative IoT solutions — connecting devices, platforms, and applications to help businesses transform ideas into smart, data-driven digital experiences",
+      link: "/iot_development",
     },
     {
       id: 6,
       icon: <MdAppSettingsAlt />,
-      title: "SEM/SEM",
+      title: "UX & UI Designs",
       description:
-        "We build high-performance Android and iOS apps with seamless user experiences, ensuring innovation and scalability for your business.",
-      link: "/website",
+        "We design and craft intuitive UX and UI experiences — helping businesses turn concepts into visually engaging and user-friendly digital products.",
+      link: "/ui&ux",
     },
     {
       id: 7,
@@ -104,15 +104,15 @@ const Contant = () => {
       title: "Cloud & DevOps",
       description:
         "We build high-performance Android and iOS apps with seamless user experiences, ensuring innovation and scalability for your business.",
-      link: "/website",
+      link: "/cloud_engineering",
     },
     {
       id: 8,
       icon: <MdAppSettingsAlt />,
-      title: "Software testing",
+      title: "SEO/SEM",
       description:
-        "We build high-performance Android and iOS apps with seamless user experiences, ensuring innovation and scalability for your business.",
-      link: "/website",
+        "Boost your website’s visibility with our SEO services. We optimize your site for higher rankings, increased traffic, and better conversions.",
+      link: "/seo",
     },
   ];
 

@@ -25,8 +25,7 @@ const Footer = () => {
               63, Noida, Uttar Pradesh (201301)
             </p>
             <p className="mb-3 flex items-center text-gray-300">
-              <FaPhoneAlt className="mr-3 text-yellow-400" /> +91-7838826136 |
-              +91-7982481190
+              <FaPhoneAlt className="mr-3 text-yellow-400" /> +91-120-5058591
             </p>
             <p className="mb-3 flex items-center text-gray-300">
               <CiMail className="mr-3 text-yellow-400" /> contact@visvik.in

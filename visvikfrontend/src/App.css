@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 .btn {
   background-color: #2563eb;         
   color: #ffffff;                    

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import ContactPage from "./contact_details";
 import Card from "./temp_1";
 import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
@@ -6,7 +8,7 @@ import { Temp_4 } from "./temp_4";
 const tittle =
   "The Advanced Cybersecurity Solutions we Offer for Today’s Digital Threats";
 const paragraph =
-  "Elevate development efficiency with robust DevOps services, focusing on CI/CD, infrastructure automation, and proactive monitoring..";
+  "We offer a range of cybersecurity services, combining advanced technology, expert strategies, and proactive risk management for comprehensive digital security.";
 const cybersecurityServices = [
   {
     title: "Network Security",
@@ -43,9 +45,11 @@ const Cyber = () => {
               businesses protect their digital assets, ensure compliance, and
               stay resilient against evolving threats..
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -57,7 +61,7 @@ const Cyber = () => {
         </div>
       </div>
       <div
-        className="p-20 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
+        className="md:p-20 p-10 relative rounded-3xl my-2 text-white max-w-6xl mx-auto bg-cover bg-center bg-no-repeat shadow-lg"
         style={{
           backgroundImage: "url('./lines-bg.webp')",
         }}
@@ -91,7 +95,10 @@ const Cyber = () => {
         tittle={tittle}
         paragraph={paragraph}
       />
-      <ContactSection />
+      <ContactSection
+        tittle="Want to Protect Your Digital Assets? Contact Us for Customized Solutions"
+        paragraph="We excel in providing customized cybersecurity solutions that can protect your digital future."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -109,6 +116,7 @@ const Cyber = () => {
       </div>
       <TechTabs />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

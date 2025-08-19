@@ -46,7 +46,7 @@ const Sidebar = ({ mainMenu, setMainMenu }) => {
     },
     {
       title: "Invester",
-      items: [{ name: "BobyMart", link: "/contact" }],
+      items: [],
     },
   ];
 
@@ -57,16 +57,14 @@ const Sidebar = ({ mainMenu, setMainMenu }) => {
       }`}
     >
       <div className="p-4">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-bold">Menu</h2>
+        <div className="flex justify-end items-center mb-4">
           <button
             onClick={() => setMainMenu(false)}
-            className="text-gray-600 text-xl"
+            className="text-gray-600 text-xl cursor-pointer"
           >
             ✕
           </button>
         </div>
-
         {menu.map((section, index) => (
           <div key={index} className="mb-3">
             <div

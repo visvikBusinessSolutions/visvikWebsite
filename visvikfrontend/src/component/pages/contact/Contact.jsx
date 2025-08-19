@@ -7,12 +7,12 @@ const Contact = () => {
       <div>
         <div className="">
           <div
-            className="relative w-full h-[60vh] md:h-[75vh] bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/9.png')" }}
+            className="relative w-full h-[20vh] md:h-[75vh] bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/contact-banner.png')" }}
           >
             <div className="absolute inset-0 bg-black/40"></div>
 
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 space-y-4">
+            {/* <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 space-y-4">
               <h2 className="text-orange-500 text-xl md:text-5xl font-bold animate-slideUp">
                 CONTACT US
               </h2>
@@ -27,9 +27,8 @@ const Contact = () => {
                 pariatur omnis voluptatem optio, odio est culpa velit, impedit
                 sed eius provident.
               </p>
-            </div>
+            </div> */}
           </div>
-
           <div className="">
             <INFO></INFO>
           </div>

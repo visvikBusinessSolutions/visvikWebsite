@@ -2,6 +2,8 @@ import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 import Card from "./temp_1";
+import ContactPage from "./contact_details";
+import { Link } from "react-router-dom";
 
 const tittle = "Comprehensive Managed IT Services We Provide";
 const paragraph =
@@ -43,9 +45,11 @@ const Manageitsevices = () => {
               We offer proactive solutions, continuous monitoring, and expert
               support to safeguard and enhance your business operations.
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -84,7 +88,10 @@ const Manageitsevices = () => {
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
       <Card data={data} tittle={tittle} paragraph={paragraph} />
-      <ContactSection />
+      <ContactSection
+        tittle="Want to Enhance your Business with Expert IT Management? Contact Us!"
+        paragraph="Our team ensures your IT operations stay secure, efficient, and reliable in this digitalized landscape."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -102,6 +109,7 @@ const Manageitsevices = () => {
       </div>
       <TechTabs />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import Card from "./temp_1";
 import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
+import ContactPage from "./contact_details";
 
 const tittle = "Our Versatile DevOps Offerings for Seamless Delivery";
 const paragraph =
@@ -42,9 +44,11 @@ const Devops = () => {
               workflows — helping businesses turn ideas into reliable, scalable,
               and efficient delivery solutions
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -81,11 +85,21 @@ const Devops = () => {
           business goals, enhance operational efficiency, and drive long-term
           growth in today’s competitive technology landscape.
         </p>
-
+        <div className="flex justify-center md:mt-6 mt-3">
+          <Link
+            to="/devops-contant"
+            className="px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition duration-300 shadow-md hover:shadow-lg"
+          >
+            Learn More
+          </Link>
+        </div>
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
       <Card data={data} tittle={tittle} paragraph={paragraph} />
-      <ContactSection />
+      <ContactSection
+        tittle="Looking to Accelerate your Development and Delivery Process? Let’s Connect!"
+        paragraph="Our team excels in implementing robust DevOps strategies that drive success."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -103,6 +117,7 @@ const Devops = () => {
       </div>
       <TechTabs />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

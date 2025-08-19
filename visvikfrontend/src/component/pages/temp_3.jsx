@@ -20,11 +20,11 @@ export default function ContactSection({ tittle, paragraph }) {
           >
             +91-120-5058591
           </a>
-          <Link to="/">
+          <a href="#contact-section">
             <button className="mt-4 bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700 transition">
               Contact Us →
             </button>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

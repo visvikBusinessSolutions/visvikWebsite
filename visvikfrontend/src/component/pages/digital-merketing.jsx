@@ -44,9 +44,11 @@ const Digital_marketing = () => {
               digital transformation solutions. We help organizations evolve,
               innovate, and thrive in an increasingly digital world.
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -95,7 +97,10 @@ const Digital_marketing = () => {
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
       <Card data={data} tittle={tittle} paragraph={paragraph} />
-      <ContactSection />
+      <ContactSection
+        tittle="Start Your Digital Marketing Journey- Connect with Us Now!"
+        paragraph="Our digital marketing specialists can improve your online presence, even if you are starting from scratch"
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">

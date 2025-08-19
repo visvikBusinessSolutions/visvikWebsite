@@ -2,6 +2,8 @@ import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 import Card from "./temp_1";
+import { Link } from "react-router-dom";
+import ContactPage from "./contact_details";
 
 const tittle = "Our Smart IoT Solutions Built for Your Business";
 const paragraph =
@@ -42,9 +44,11 @@ const Iotdevelopment = () => {
               devices, platforms, and applications to help businesses transform
               ideas into smart, data-driven digital experiences.
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -84,7 +88,10 @@ const Iotdevelopment = () => {
         <span className="absolute right-6 text-9xl text-right">”</span>
       </div>
       <Card data={data} tittle={tittle} paragraph={paragraph} />
-      <ContactSection />
+      <ContactSection
+        tittle="Ready for Smarter Connectivity? Connect with us for your Project!"
+        paragraph="Discuss your project with the experts and choose to transform your business with innovative IoT solutions."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -102,6 +109,7 @@ const Iotdevelopment = () => {
       </div>
       <TechTabs />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

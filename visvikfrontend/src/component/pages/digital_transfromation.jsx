@@ -2,6 +2,8 @@ import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
 import Card from "./temp_1";
+import ContactPage from "./contact_details";
+import { Link } from "react-router-dom";
 
 const tittle =
   "Unlock Your Potential with Our Digital Transformation Expertise";
@@ -43,9 +45,11 @@ const Digital_Transformation = () => {
               digital transformation solutions. We help organizations evolve,
               innovate, and thrive in an increasingly digital world.
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -84,7 +88,10 @@ const Digital_Transformation = () => {
       </div>
       <Card data={data} tittle={tittle} paragraph={paragraph} />
 
-      <ContactSection />
+      <ContactSection
+        tittle="Ready to Redefine Your Business? Reach Out for Consultation."
+        paragraph="We offer a combination of solutions to kickstart your digital transformation journey."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -102,6 +109,7 @@ const Digital_Transformation = () => {
       </div>
       <TechTabs />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

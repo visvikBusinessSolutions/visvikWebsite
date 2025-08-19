@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import Card from "./temp_1";
 import TechTabs from "./temp_2";
 import ContactSection from "./temp_3";
 import { Temp_4 } from "./temp_4";
+import ContactPage from "./contact_details";
 
 const tittle = "Our Cutting-Edge Native App Solutions";
 const paragraph =
@@ -10,7 +12,7 @@ const data_2 = [
   {
     title: "Custom Native App Development",
     description:
-      "Our team at AppSquadz recognizes the importance of customization tailored to the specific needs of a business to ensure high performance and seamless functionality. We provide custom native app development services for all types of businesses, delivering maximum results.",
+      "Our team at Visvik recognizes the importance of customization tailored to the specific needs of a business to ensure high performance and seamless functionality. We provide custom native app development services for all types of businesses, delivering maximum results.",
   },
   {
     title: "iOS App Development",
@@ -75,9 +77,11 @@ const Native = () => {
               optimal results. Our expertise lies in creating applications that
               are specifically tailored for Android and iOS platforms.
             </h4>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
-              contact Now →
-            </button>
+            <Link to="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-semibold transition-all duration-300">
+                contact Now →
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <img
@@ -134,7 +138,10 @@ const Native = () => {
           ))}
         </div>
       </div>
-      <ContactSection />
+      <ContactSection
+        tittle="Want a robust application for iOS or Android?"
+        paragraph="Our experts are here to create a top-tier app for your business, whether it's for an Android device or an iPhone."
+      />
       <div className="md:py-12 py-6">
         <div className="mx-auto">
           <h2 className="text-center text-2xl md:text-4xl font-bold pb-5">
@@ -152,6 +159,7 @@ const Native = () => {
       </div>
       <TechTabs />
       <Temp_4 />
+      <ContactPage />
     </div>
   );
 };

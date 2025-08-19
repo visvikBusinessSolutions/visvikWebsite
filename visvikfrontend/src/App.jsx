@@ -33,6 +33,8 @@ import Website_Contant from "./contant/website-contant.jsx";
 import Mobile_contant from "./contant/mobile-contant.jsx";
 import SoftwareDevelopmentServices from "./contant/software-contant.jsx";
 import Digital_contant from "./contant/digital-contant.jsx";
+import CloudDevOpsServices from "./contant/devops-contant.jsx";
+import Seo from "./contant/seo-contant.jsx";
 
 function App() {
   return (
@@ -85,6 +87,8 @@ function App() {
             element={<SoftwareDevelopmentServices />}
           />
           <Route path="digital-contant" element={<Digital_contant />} />
+          <Route path="devops-contant" element={<CloudDevOpsServices />} />
+          <Route path="Seo" element={<Seo />} />
 
           {/* temprary work */}
           <Route path="temp" element={<Desing_Page />} />
