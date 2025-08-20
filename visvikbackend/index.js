@@ -40,6 +40,11 @@ app.use("/v1/queries", queryRouter);
 app.use("/v1/get-in-touch", getInTouchRouter);
 app.use("/v1/mail", mailRouter);
 
+// ✅ Test route (root)
+app.get("/", (req, res) => {
+  res.send("API is working 🚀");
+});
+
 // ✅ Start server
 const startServer = async () => {
   try {
