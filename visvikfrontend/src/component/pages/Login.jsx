@@ -10,27 +10,27 @@ const Login = () => {
     password: "",
   });
 
-  const [errorMsg, setErrorMsg] = useState(" ");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const onSubmitSignIn = async (e) => {
     e.preventDefault();
-    //send the data
     try {
+
       const res = await axios.post(
         "http://localhost:5000/v1/auth/login",
         usersData
       );
+
+      const res = await api.post("/v1/auth/login", usersData);
       const data = res.data;
       console.log("Login Success:", data);
       localStorage.setItem("token", data.token);
       navigate("/admin");
       setErrorMsg("");
-
-      console.log("Login Success:", res.data);
     } catch (err) {
       const msg = err.response?.data?.error || "Login failed";
       setErrorMsg(msg);
-      console.log(errorMsg);
+      console.log(msg);
     }
   };
 
@@ -110,6 +110,10 @@ const Login = () => {
               <input type="checkbox" className="mr-2" />
               <label className="text-sm">Keep me Signed in</label>
             </div>
+
+            {errorMsg && (
+              <p className="text-red-400 text-sm mt-1">{errorMsg}</p>
+            )}
 
             <button
               type="submit"

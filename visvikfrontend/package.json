@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "host": "vite --host"
+    
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
