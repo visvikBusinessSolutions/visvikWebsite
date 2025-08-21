@@ -15,13 +15,17 @@ const Sidebar = ({ mainMenu, setMainMenu }) => {
         { name: "About Us", link: "/about" },
         {
           name: "Work Culture",
-          link: "/work-culture",
+          link: "/",
         },
-        { name: "Our Partners", link: "/teams" },
+        { name: "Our Partners", link: "/" },
         { name: "Careers", link: "/careers" },
         {
           name: "Event/Webinar",
-          link: "/press",
+          link: "/",
+        },
+        {
+          name: "Careers",
+          link: "/careers",
         },
       ],
     },
