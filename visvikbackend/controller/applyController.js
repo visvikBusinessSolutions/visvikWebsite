@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import jobModel from "../models/job.js";
 import {
   addApplicationService,
@@ -7,6 +8,7 @@ import {
   updateApplicationService,
 } from "../services/applyService.js";
 import cloudinary from "../config/cloudinary.js";
+import applyModel from "../models/applyModel.js";
 
 const uploadPdfToCloudinary = async (localPath, folder) => {
   const res = await cloudinary.uploader.upload(localPath, {
@@ -205,7 +207,11 @@ export const updateApplicationStatus = async (req, res) => {
   try {
     const { id } = req.params;
     const { status } = req.body;
-
+    //added by shahanshah
+     if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ success: false, message: "Invalid application ID" });
+    }
+    //only yahi thak kiya
     const allowedStatuses = [
       "Pending",
       "Reviewed",
@@ -243,3 +249,4 @@ export const updateApplicationStatus = async (req, res) => {
       .json({ success: false, message: "Error updating application status" });
   }
 };
+

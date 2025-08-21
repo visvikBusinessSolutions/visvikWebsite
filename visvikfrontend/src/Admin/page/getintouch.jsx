@@ -36,23 +36,23 @@ export default function Getintouch() {
   };
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
+    <div className="md:p-6 p-2 min-h-screen">
       <h2 className="text-2xl font-bold mb-4">Admin Panel - Enquiries</h2>
 
-      <div className="bg-white rounded-lg shadow">
-        <table className="w-full border">
+      <div className="overflow-x-auto">
+        <table className="min-w-full border border-gray-300 rounded-lg">
           <thead>
-            <tr className="bg-gray-200">
-              <th className="border p-2">First Name</th>
-              <th className="border p-2">Last Name</th>
-              <th className="border p-2">Email</th>
-              <th className="border p-2">Mobile</th>
-              <th className="border p-2">Company</th>
-              <th className="border p-2">Country</th>
-              <th className="border p-2">Category</th>
-              <th className="border p-2">Budget</th>
-              <th className="border p-2">Tell Us</th>
-              <th className="border p-2">Actions</th>
+            <tr className="bg-gray-100">
+              <th className="border border-gray-300 p-2">First Name</th>
+              <th className="border border-gray-300 p-2">Last Name</th>
+              <th className="border border-gray-300 p-2">Email</th>
+              <th className="border border-gray-300 p-2">Mobile</th>
+              <th className="border border-gray-300 p-2">Company</th>
+              <th className="border border-gray-300 p-2">Country</th>
+              <th className="border border-gray-300 p-2">Category</th>
+              <th className="border border-gray-300 p-2">Budget</th>
+              <th className="border border-gray-300 p-2">Tell Us</th>
+              <th className="border border-gray-300 p-2">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -65,26 +65,39 @@ export default function Getintouch() {
             ) : (
               data.map((item) => (
                 <tr key={item.id}>
-                  <td className="border p-2">{item.firstName}</td>
-                  <td className="border p-2">{item.lastName}</td>
-                  <td className="border p-2">{item.email}</td>
-                  <td className="border p-2">{item.mobileNumber}</td>
-                  <td className="border p-2">{item.companyName}</td>
-                  <td className="border p-2">{item.country}</td>
-                  <td className="border p-2">{item.category}</td>
-                  <td className="border p-2">{item.budget}</td>
-                  <td className="border p-2">{item.message}</td>
-                  <td className="border p-2 flex gap-2">
+                  <td className="border border-gray-300 p-2">
+                    {item.firstName}
+                  </td>
+                  <td className="border border-gray-300 p-2">
+                    {item.lastName}
+                  </td>
+                  <td className="border border-gray-300 p-2">{item.email}</td>
+                  <td className="border border-gray-300 p-2">
+                    {item.mobileNumber}
+                  </td>
+                  <td className="border border-gray-300 p-2">
+                    {item.companyName}
+                  </td>
+                  <td className="border border-gray-300 p-2">{item.country}</td>
+                  <td className="border border-gray-300 p-2">
+                    {item.category}
+                  </td>
+                  <td className="border border-gray-300 p-2">{item.budget}</td>
+                  <td className="border border-gray-300 p-2">{item.message}</td>
+                  <td className="p-2 flex justify-center gap-2 text-center">
                     <button
                       onClick={() => handleView(item)}
                       className="text-blue-600 hover:text-blue-800"
                     >
                       <FaEye className="w-5 h-5" />
                     </button>
-                    <button className="text-green-600">
+                    {/* <button className="text-green-600">
                       <FaEdit />
-                    </button>
-                    <button onClick={() => handleDelete(item._id)}>
+                    </button> */}
+                    <button
+                      onClick={() => handleDelete(item._id)}
+                      className="text-red-600 hover:text-red-800"
+                    >
                       <FaTrash />
                     </button>
                   </td>

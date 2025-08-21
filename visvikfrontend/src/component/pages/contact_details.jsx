@@ -225,8 +225,6 @@ import api from "../../api";
 export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Form ke andar ka data nikalna
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
