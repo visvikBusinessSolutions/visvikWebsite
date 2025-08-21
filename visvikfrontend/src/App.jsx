@@ -38,10 +38,12 @@ import SoftwareDevelopmentServices from "./contant/software-contant.jsx";
 import Digital_contant from "./contant/digital-contant.jsx";
 import CloudDevOpsServices from "./contant/devops-contant.jsx";
 import Seo from "./contant/seo-contant.jsx";
+import LoaderPopup from "./component/popup.jsx";
 
 function App() {
   return (
     <BrowserRouter>
+      <LoaderPopup />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>

@@ -2,7 +2,7 @@ const Welcome = ({ userName = "VISVIK" }) => {
   return (
     <div
       className="bg-gradient-to-r from-blue-50 via-white to-blue-50 
-                 p-6 sm:p-8 rounded-2xl shadow-lg mb-6 border border-gray-100
+                 p-6 sm:p-8 rounded-2xl mb-6 border border-gray-100
                  opacity-0 translate-y-5 animate-fadeIn"
     >
       <div className="flex items-center justify-between">

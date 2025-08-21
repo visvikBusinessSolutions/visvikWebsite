@@ -7,12 +7,14 @@ import ApplicationManagement from "./page/Application";
 import Settings from "./page/Settings";
 import Quary from "./page/quary";
 import Getintouch from "./page/getintouch";
+import Welcome from "./layout/TopBar";
 
 export default function Admin() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex flex-col md:flex-row min-h-screen">
       <SideBar />
-      <div className="flex-1 md:p-6 p-2">
+      <div className="md:flex-1 md:p-2 p-2">
+        <Welcome />
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="jobs" element={<Job />} />

@@ -31,9 +31,9 @@ export default function Quary() {
   };
 
   // Edit User (Demo)
-  const handleEdit = (id) => {
-    alert("Edit feature coming soon for ID: " + id);
-  };
+  // const handleEdit = (id) => {
+  //   alert("Edit feature coming soon for ID: " + id);
+  // };
 
   // View User
   const handleView = (user) => {
@@ -41,19 +41,19 @@ export default function Quary() {
   };
 
   return (
-    <div className="p-6">
+    <div className="md:p-6 p-2">
       <h2 className="text-2xl font-bold mb-4">Admin Panel - User Messages</h2>
 
       {/* Table */}
       <div className="overflow-x-auto">
-        <table className="min-w-full border border-gray-200 rounded-lg">
+        <table className="min-w-full border border-gray-300 rounded-lg">
           <thead className="bg-gray-100">
             <tr>
-              <th className="px-4 py-2 border">Full Name</th>
-              <th className="px-4 py-2 border">Email</th>
-              <th className="px-4 py-2 border">Phone No</th>
-              <th className="px-4 py-2 border">Message</th>
-              <th className="px-4 py-2 border">Actions</th>
+              <th className="px-4 py-2 border border-gray-300">FULL NAME</th>
+              <th className="px-4 py-2 border border-gray-300">EMAIL</th>
+              <th className="px-4 py-2 border border-gray-300">PHONENO.</th>
+              <th className="px-4 py-2 border border-gray-300">MESSAGE</th>
+              <th className="px-4 py-2 border border-gray-300">ACTIONS</th>
             </tr>
           </thead>
           {/* <tbody>
@@ -101,28 +101,30 @@ export default function Quary() {
             {users.length > 0 ? (
               users.map((user) => (
                 <tr key={user._id} className="text-center">
-                  <td className="px-4 py-2 border">{user.name}</td>
-                  <td className="px-4 py-2 border">{user.email}</td>
-                  <td className="px-4 py-2 border">{user.phoneNumber}</td>
-                  <td className="px-4 py-2 border">{user.message}</td>
-                  <td className="px-4 py-2 border flex justify-center gap-2">
+                  <td className="px-4 py-2 border border-gray-300">
+                    {user.name}
+                  </td>
+                  <td className="px-4 py-2 border border-gray-300">
+                    {user.email}
+                  </td>
+                  <td className="px-4 py-2 border border-gray-300">
+                    {user.phoneNumber}
+                  </td>
+                  <td className="px-4 py-2 border border-gray-300">
+                    {user.message}
+                  </td>
+                  <td className="px-4 py-2 flex justify-center gap-2">
                     <button
                       onClick={() => handleView(user)}
-                      className="text-blue-600 hover:text-blue-800"
+                      className="bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700"
                     >
-                      <Eye className="w-5 h-5" />
-                    </button>
-                    <button
-                      onClick={() => handleEdit(user._id)}
-                      className="text-green-600 hover:text-green-800"
-                    >
-                      <Pencil className="w-5 h-5" />
+                      View
                     </button>
                     <button
                       onClick={() => handleDelete(user._id)}
-                      className="text-red-600 hover:text-red-800"
+                      className="bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700"
                     >
-                      <Trash2 className="w-5 h-5" />
+                      Delete
                     </button>
                   </td>
                 </tr>

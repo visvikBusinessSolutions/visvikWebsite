@@ -11,7 +11,6 @@ import {
   CategoryScale,
   LinearScale,
 } from "chart.js";
-import Welcome from "../layout/TopBar";
 
 ChartJS.register(
   Title,
@@ -43,13 +42,13 @@ export default function Dashboard() {
 
       // Count by status
       const pendingCount = applications.filter(
-        (app) => app.status === "pending"
+        (app) => app.status === "Pending"
       ).length;
       const acceptedCount = applications.filter(
-        (app) => app.status === "accepted"
+        (app) => app.status === "Hired"
       ).length;
       const rejectedCount = applications.filter(
-        (app) => app.status === "rejected"
+        (app) => app.status === "Rejected"
       ).length;
 
       setStats({
@@ -93,9 +92,8 @@ export default function Dashboard() {
 
   return (
     <>
-      <Welcome />
-      <div className="p-6">
-        <h1 className="text-2xl font-semibold mb-6">Dashboard</h1>
+      <div className="md:p-6 p-3">
+        <h1 className="text-2xl font-semibold md:mb-6 mb-3">Dashboard</h1>
 
         {/* Summary Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 mb-6">
@@ -109,15 +107,15 @@ export default function Dashboard() {
             </p>
           </div>
           <div className="bg-yellow-500 text-white p-4 rounded-lg shadow-lg">
-            <h2 className="text-lg">Pending</h2>
+            <h2 className="md:text-lg">Pending</h2>
             <p className="text-3xl font-bold">{stats.pending}</p>
           </div>
           <div className="bg-green-500 text-white p-4 rounded-lg shadow-lg">
-            <h2 className="text-lg">Accepted</h2>
+            <h2 className="md:text-lg">Accepted</h2>
             <p className="text-3xl font-bold">{stats.accepted}</p>
           </div>
           <div className="bg-red-500 text-white p-4 rounded-lg shadow-lg">
-            <h2 className="text-lg">Rejected</h2>
+            <h2 className="md:text-lg">Rejected</h2>
             <p className="text-3xl font-bold">{stats.rejected}</p>
           </div>
         </div>
@@ -125,14 +123,14 @@ export default function Dashboard() {
         {/* Charts */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white p-4 rounded-lg shadow-lg">
-            <h2 className="text-lg font-semibold mb-4">
+            <h2 className="md:text-lg font-semibold mb-4">
               Applications Overview
             </h2>
             <Bar data={barData} />
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow-lg">
-            <h2 className="text-lg font-semibold mb-4">
+            <h2 className="md:text-lg font-semibold mb-4">
               Application Status Distribution
             </h2>
             <Pie data={pieData} />
