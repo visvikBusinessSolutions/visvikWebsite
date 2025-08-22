@@ -1,14 +1,16 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaEye, FaEdit, FaTrash } from "react-icons/fa";
+import api from "../../api";
 
 export default function Getintouch() {
   const [data, setdata] = useState([]);
   const [selected, setSelected] = useState(null);
   useEffect(() => {
     const token = localStorage.getItem("token");
-    axios
-      .get("http://localhost:5000/v1/get-in-touch", {
+    //change huee
+    api
+      .get("/v1/get-in-touch", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -21,7 +23,7 @@ export default function Getintouch() {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/v1/get-in-touch/${id}`, {
+      await api.delete(`/v1/get-in-touch/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setdata(data.filter((u) => u._id !== id));

@@ -1,5 +1,6 @@
-import axios from "axios";
+// import axios from "axios";
 import { useForm } from "react-hook-form";
+import api from "../../../api";
 
 const INFO = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -11,7 +12,7 @@ const INFO = () => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post("http://localhost:5000/v1/queries", data);
+      await api.post("/v1/queries", data);
       alert("Message Sent Successfully!");
       reset(); // Form clear
     } catch (error) {
