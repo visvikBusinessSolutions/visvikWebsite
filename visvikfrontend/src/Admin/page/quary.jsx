@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Pencil, Trash2, Eye } from "lucide-react";
-import axios from "axios";
+// import axios from "axios";
+import api from "../../api";
 
 export default function Quary() {
   const [users, setUsers] = useState([]);
   const [selected, setSelected] = useState(null);
   useEffect(() => {
     const token = localStorage.getItem("token");
-    axios
-      .get("http://localhost:5000/v1/queries", {
+    api
+      .get("/v1/queries", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -21,7 +22,7 @@ export default function Quary() {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/v1/queries/${id}`, {
+      await api.delete(`/v1/queries/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(users.filter((u) => u._id !== id));

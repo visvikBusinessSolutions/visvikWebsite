@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import api from "../../api"; // import your api.js file
-b
 export default function TeamPage() {
   const bannerImage = "/team-banner.jpeg";
   const [teamMembers, setTeamMembers] = useState([]);
