@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-
-const API_URL = "http://localhost:5000/v1/team"; // replace with your API
-
+import api from "../../api"; // import your api.js file
+b
 export default function TeamPage() {
   const bannerImage = "/team-banner.jpeg";
   const [teamMembers, setTeamMembers] = useState([]);
@@ -12,11 +10,7 @@ export default function TeamPage() {
   // Fetch team members from API
   const fetchMembers = async () => {
     try {
-      const res = await axios.get(API_URL, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const res = await api.get("/v1/team"); // use api instance
       setTeamMembers(res.data.data || []);
       setLoading(false);
     } catch (err) {
