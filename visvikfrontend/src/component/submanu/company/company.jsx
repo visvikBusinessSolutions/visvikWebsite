@@ -16,8 +16,6 @@ const companyData = [
     items: [
       "Experience a collaborative, growth-focused work environment with a diverse culture.",
     ],
-    // link: "/workculture",
-    // link: "/",
   },
   {
     title: "Careers",
