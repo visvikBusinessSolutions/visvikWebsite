@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import api from "../../api"; // ✅ use your api.js instance
+import api from "../../api"; // ✅ using axios instance
 
 function TeamMemberForm({ onSubmit, initialData = {}, onClose }) {
   const [formData, setFormData] = useState({
@@ -9,13 +9,16 @@ function TeamMemberForm({ onSubmit, initialData = {}, onClose }) {
     department: initialData.department || "",
     image: null,
   });
+
   const [previewImage, setPreviewImage] = useState(initialData.image || null);
 
+  // Handle input text/select fields
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  // Handle image upload
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -26,6 +29,7 @@ function TeamMemberForm({ onSubmit, initialData = {}, onClose }) {
     }
   };
 
+  // Submit form
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const token = localStorage.getItem("token");
@@ -36,20 +40,24 @@ function TeamMemberForm({ onSubmit, initialData = {}, onClose }) {
     fd.append("department", formData.department);
     if (formData.image) fd.append("image", formData.image);
 
+    // 🔍 Debugging - log FormData contents
+    for (let [key, value] of fd.entries()) {
+      console.log(`${key}:`, value);
+    }
+
     try {
       if (formData.id) {
         // ✅ Update team member
         await api.put(`/v1/team/${formData.id}`, fd, {
           headers: {
-            "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,
           },
         });
+        alert("✅ Team member updated successfully!");
       } else {
         // ✅ Create team member
         await api.post("/v1/team", fd, {
           headers: {
-            "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,
           },
         });
@@ -59,8 +67,8 @@ function TeamMemberForm({ onSubmit, initialData = {}, onClose }) {
       onSubmit();
       onClose();
     } catch (err) {
-      console.error("❌ Failed to save team member:", err);
-      alert("Failed to save team member. Please try again.");
+      console.error("❌ Failed to save team member:", err.response || err);
+      alert(err.response?.data?.message || "Failed to save team member. Please try again.");
     }
   };
 
@@ -70,6 +78,7 @@ function TeamMemberForm({ onSubmit, initialData = {}, onClose }) {
         <h2 className="text-2xl font-bold mb-6 text-center">
           {formData.id ? "Edit Team Member" : "Add Team Member"}
         </h2>
+
         <form onSubmit={handleFormSubmit} className="space-y-4">
           <input
             type="text"
@@ -80,6 +89,7 @@ function TeamMemberForm({ onSubmit, initialData = {}, onClose }) {
             placeholder="Name"
             className="w-full border p-2 rounded"
           />
+
           <input
             type="text"
             name="designation"
@@ -89,6 +99,7 @@ function TeamMemberForm({ onSubmit, initialData = {}, onClose }) {
             placeholder="Designation"
             className="w-full border p-2 rounded"
           />
+
           <select
             name="department"
             value={formData.department}
@@ -98,10 +109,12 @@ function TeamMemberForm({ onSubmit, initialData = {}, onClose }) {
           >
             <option value="">Select Department</option>
             <option value="founder">Founder</option>
-            <option value="developer">Developer</option>
-            <option value="business">Business</option>
+            <option value="development">Development</option>
+            <option value="bde">Business Development</option>
           </select>
+
           <input type="file" accept="image/*" onChange={handleImageChange} />
+
           {previewImage && (
             <img
               src={previewImage}
