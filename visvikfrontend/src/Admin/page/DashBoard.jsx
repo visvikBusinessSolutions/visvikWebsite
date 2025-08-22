@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Bar, Pie } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -11,6 +11,7 @@ import {
   CategoryScale,
   LinearScale,
 } from "chart.js";
+import api from "../../api";
 
 ChartJS.register(
   Title,
@@ -34,7 +35,7 @@ export default function Dashboard() {
   //fetch application from backend
   const fetchApplicationStats = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/v1/applications/", {
+      const res = api.get("/v1/applications/", {
         headers: { Authorization: `Bearer ${token}` },
       });
 

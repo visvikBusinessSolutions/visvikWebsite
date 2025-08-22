@@ -1,6 +1,3 @@
-
-
-
 // import React, { useState, useRef } from "react";
 // import axios from "axios";
 
@@ -166,9 +163,9 @@
 //   );
 // }
 
-
 import React, { useState, useRef } from "react";
-import axios from "axios";
+// import axios from "axios";
+import api from "../api";
 
 export default function ApplyForm() {
   const jobId = localStorage.getItem("selectedJobId") || "";
@@ -198,9 +195,17 @@ export default function ApplyForm() {
   };
 
   const validateForm = () => {
-    const { name, email, expectedSalary, experience, noticePeriod, resume } = formData;
+    const { name, email, expectedSalary, experience, noticePeriod, resume } =
+      formData;
 
-    if (!name || !email || !expectedSalary || !experience || !noticePeriod || !resume) {
+    if (
+      !name ||
+      !email ||
+      !expectedSalary ||
+      !experience ||
+      !noticePeriod ||
+      !resume
+    ) {
       alert("Please fill all required fields and upload your resume.");
       return false;
     }
@@ -235,7 +240,10 @@ export default function ApplyForm() {
     }
 
     // Validate additional document type
-    if (formData.additionalDocument && formData.additionalDocument.type !== "application/pdf") {
+    if (
+      formData.additionalDocument &&
+      formData.additionalDocument.type !== "application/pdf"
+    ) {
       alert("Additional document must be a PDF file.");
       return false;
     }
@@ -257,14 +265,19 @@ export default function ApplyForm() {
       }
 
       // Append other fields
-      ["name", "email", "phone", "expectedSalary", "experience", "noticePeriod"].forEach(
-        (key) => form.append(key, formData[key])
-      );
+      [
+        "name",
+        "email",
+        "phone",
+        "expectedSalary",
+        "experience",
+        "noticePeriod",
+      ].forEach((key) => form.append(key, formData[key]));
 
       form.append("jobId", formData.jobId);
 
       const token = localStorage.getItem("token"); // optional auth
-      const res = await axios.post("http://localhost:5000/v1/applications", form, {
+      const res = api.post("/v1/applications", form, {
         headers: {
           "Content-Type": "multipart/form-data",
           ...(token && { Authorization: `Bearer ${token}` }),
@@ -307,13 +320,18 @@ export default function ApplyForm() {
             name="jobId"
             className="w-full p-2  rounded-lg bg-amber-50"
             value={formData.jobId}
-            
             disabled
           />
         </div>
 
-        {["name", "email", "phone", "expectedSalary", "experience", "noticePeriod"].map((field) => (
-          
+        {[
+          "name",
+          "email",
+          "phone",
+          "expectedSalary",
+          "experience",
+          "noticePeriod",
+        ].map((field) => (
           <div className="mb-4" key={field}>
             <label className="block mb-2">
               {field.charAt(0).toUpperCase() + field.slice(1)}
@@ -322,7 +340,9 @@ export default function ApplyForm() {
               type={
                 field === "email"
                   ? "email"
-                  : field.includes("experience") || field.includes("notice") || field.includes("salary")
+                  : field.includes("experience") ||
+                    field.includes("notice") ||
+                    field.includes("salary")
                   ? "number"
                   : "text"
               }
@@ -334,8 +354,6 @@ export default function ApplyForm() {
             />
           </div>
         ))}
-
-        
 
         <div className="mb-4">
           <label className="block mb-2">Upload Resume (PDF)</label>
