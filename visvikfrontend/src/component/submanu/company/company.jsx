@@ -16,7 +16,8 @@ const companyData = [
     items: [
       "Experience a collaborative, growth-focused work environment with a diverse culture.",
     ],
-    link: "/workculture",
+    // link: "/workculture",
+    link: "/",
   },
   {
     title: "Careers",
@@ -32,7 +33,8 @@ const companyData = [
     items: [
       "Collaborating with trusted partners to bring impactful projects to life.",
     ],
-    link: "/ourpartners",
+    // link: "/ourpartners",
+    link: "/",
   },
   {
     title: "Event / Webinar",
@@ -40,7 +42,8 @@ const companyData = [
     items: [
       "Explore our global events and webinars to understand our impact better.",
     ],
-    link: "/event",
+    // link: "/event",
+    link: "/",
   },
 ];
 

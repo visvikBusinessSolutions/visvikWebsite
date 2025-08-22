@@ -81,10 +81,10 @@ export default function TeamPage() {
     </>
   );
 
-  if (loading)
-    return <p className="text-center mt-12 text-lg">Loading team members...</p>;
+  // if (loading)
+  //   return <p className="text-center mt-12 text-lg">Loading team members...</p>;
 
-  if (error) return <p className="text-center mt-12 text-red-500">{error}</p>;
+  // if (error) return <p className="text-center mt-12 text-red-500">{error}</p>;
 
   const groupedMembers = groupByRole(teamMembers);
 
@@ -115,6 +115,14 @@ export default function TeamPage() {
         <h1 className="text-5xl font-extrabold text-center mb-12 text-indigo-400">
           Meet Our Team
         </h1>
+        {loading && (
+          <p className="text-center mt-12 text-lg text-gray-500">
+            Loading team members...
+          </p>
+        )}
+
+        {/* ✅ Error message */}
+        {error && <p className="text-center mt-12 text-red-500">{error}</p>}
 
         {/* Render team sections dynamically */}
         {groupedMembers["founder"] &&
