@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
+import api from "../../api";
 
 export default function ApplicationManagement() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -23,7 +24,7 @@ export default function ApplicationManagement() {
   useEffect(() => {
     const fetchApplications = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/v1/applications/", {
+        const res = api.get("/v1/applications/", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -57,8 +58,8 @@ export default function ApplicationManagement() {
   }, []);
   const handleStatusChange = async (id, newStatus) => {
     try {
-      const res = await axios.patch(
-        `http://localhost:5000/v1/applications/${id}/status`,
+      const res = api.patch(
+        `/v1/applications/${id}/status`,
         { status: newStatus },
         {
           headers: {
@@ -83,8 +84,8 @@ export default function ApplicationManagement() {
   };
   const handlemail = async () => {
     try {
-      await axios.post(
-        "http://localhost:5000/v1/mail/send",
+      api.post(
+        "/v1/mail/send",
         formData, // formData object with email, subject, description
         {
           headers: {
@@ -105,7 +106,7 @@ export default function ApplicationManagement() {
     }
 
     try {
-      await axios.delete(`http://localhost:5000/v1/applications/${id}`, {
+      api.delete(`/v1/applications/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

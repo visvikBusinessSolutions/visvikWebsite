@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
+import api from "../../api";
 
 export function JobPostForm({ onAdd, onEdit, initialData = {}, onClose }) {
   const [formData, setFormData] = useState({
@@ -145,7 +146,7 @@ function JobPostPage() {
 
   const fetchJobs = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/v1/jobs");
+      const res = api.get("/v1/jobs");
       setJobPosts(res.data.data || []);
     } catch (err) {
       console.error("Error fetching jobs", err);
@@ -155,7 +156,7 @@ function JobPostPage() {
   const handleAddJob = async (data) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.post("http://localhost:5000/v1/jobs", data, {
+      await api.post("/v1/jobs", data, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchJobs();
@@ -167,7 +168,7 @@ function JobPostPage() {
   const handleEditJob = async (id, data) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.put(`http://localhost:5000/v1/jobs/${id}`, data, {
+      await api.put(`/v1/jobs/${id}`, data, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchJobs();
@@ -180,7 +181,7 @@ function JobPostPage() {
     const token = localStorage.getItem("token");
     if (!window.confirm("Delete this job post?")) return;
     try {
-      await axios.delete(`http://localhost:5000/v1/jobs/${id}`, {
+      await api.delete(`/v1/jobs/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchJobs();
