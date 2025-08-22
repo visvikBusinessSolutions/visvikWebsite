@@ -10,7 +10,7 @@ const Sidebar = ({ mainMenu, setMainMenu }) => {
 
   const menu = [
     {
-      title: "Company",
+      title: "COMPANY",
       items: [
         { name: "About Us", link: "/about" },
         {
@@ -30,7 +30,7 @@ const Sidebar = ({ mainMenu, setMainMenu }) => {
       ],
     },
     {
-      title: "Services",
+      title: "SERVICE",
       items: [
         // Add more
         { name: "AWS", link: "/aws" },
@@ -49,14 +49,14 @@ const Sidebar = ({ mainMenu, setMainMenu }) => {
       ],
     },
     {
-      title: "Invester",
+      title: "INVESTER",
       items: [],
     },
   ];
 
   return (
     <div
-      className={`fixed top-0 left-0 h-full w-[60vw] bg-white text-black p-4 z-40 transform transition-transform duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 h-full w-[60vw] bg-blue-50 text-black p-4 z-40 transform transition-transform duration-300 ease-in-out ${
         mainMenu ? "translate-x-0" : "-translate-x-full"
       }`}
     >
