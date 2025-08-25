@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Banner from "./commonbanner";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../../api";
+// import axios from "axios";
 
 const Careers = () => {
   const [jobs, setJobs] = useState([]);
@@ -10,7 +11,7 @@ const Careers = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/v1/jobs");
+        const res = await api.get("/v1/jobs");
         setJobs(res.data.data || []);
       } catch (error) {
         console.error("Failed to fetch jobs:", error);

@@ -24,7 +24,7 @@ export default function ApplicationManagement() {
   useEffect(() => {
     const fetchApplications = async () => {
       try {
-        const res = api.get("/v1/applications/", {
+        const res = await api.get("/v1/applications/", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
